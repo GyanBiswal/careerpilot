@@ -1,6 +1,18 @@
-from fastapi import FastAPI
+import logging
+
+from fastapi import Depends, FastAPI, HTTPException
+from sqlalchemy import text
+from sqlalchemy.exc import SQLAlchemyError
+from sqlalchemy.orm import Session
 
 from app.core.config import get_settings
+from app.db.session import get_db
+
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s %(levelname)s %(name)s: %(message)s",
+)
+logger = logging.getLogger("careerpilot")
 
 settings = get_settings()
 
@@ -19,3 +31,15 @@ def health_check() -> dict:
         "service": settings.app_name,
         "version": settings.app_version,
     }
+
+
+@app.get("/health/db", tags=["Health"])
+def database_health_check(db: Session = Depends(get_db)) -> dict:
+    """Readiness check: confirms PostgreSQL is reachable."""
+    try:
+        db.execute(text("SELECT 1"))
+    except SQLAlchemyError:
+        # Log details server-side; never expose them to the client.
+        logger.exception("Database health check failed")
+        raise HTTPException(status_code=503, detail="Database unavailable")
+    return {"status": "ok", "database": "connected"}

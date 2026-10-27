@@ -10,6 +10,9 @@ class Settings(BaseSettings):
     app_env: str = "development"
     app_version: str = "0.1.0"
 
+    # Required: no default, so a missing value fails loudly at startup.
+    database_url: str
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
