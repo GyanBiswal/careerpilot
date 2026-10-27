@@ -1,0 +1,22 @@
+# Environments and secrets
+.venv/
+venv/
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Generated / uploads (used in later phases)
+uploads/
+*.log
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
