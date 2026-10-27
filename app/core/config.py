@@ -10,8 +10,15 @@ class Settings(BaseSettings):
     app_env: str = "development"
     app_version: str = "0.1.0"
 
-    # Required: no default, so a missing value fails loudly at startup.
+    # Required: no defaults, so missing values fail loudly at startup.
     database_url: str
+    secret_key: str
+
+    jwt_algorithm: str = "HS256"
+    access_token_expire_minutes: int = 60
+
+    # Only used by pytest; must point at a different database.
+    test_database_url: str | None = None
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
