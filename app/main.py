@@ -5,7 +5,7 @@ from sqlalchemy import text
 from sqlalchemy.exc import SQLAlchemyError
 from sqlalchemy.orm import Session
 
-from app.api.routes import applications, auth, users
+from app.api.routes import applications, auth, resumes, users
 from app.core.config import get_settings
 from app.db.session import get_db
 
@@ -26,6 +26,7 @@ app = FastAPI(
 app.include_router(auth.router)
 app.include_router(users.router)
 app.include_router(applications.router)
+app.include_router(resumes.router)
 
 
 @app.get("/health", tags=["Health"])

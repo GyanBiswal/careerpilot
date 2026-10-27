@@ -20,6 +20,10 @@ class Settings(BaseSettings):
     # Only used by pytest; must point at a different database.
     test_database_url: str | None = None
 
+    # File upload limits
+    max_upload_size_mb: int = 5
+    max_resume_pages: int = 20
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
