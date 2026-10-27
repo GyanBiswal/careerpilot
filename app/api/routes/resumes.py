@@ -12,9 +12,10 @@ from app.db.session import get_db
 from app.models.job_application import JobApplication
 from app.models.resume import Resume
 from app.schemas.resume import ResumeDetail, ResumeRead
-from app.services.resume_parser import (
-    ResumeFileError,
-    parse_resume,
+from app.services.document_parser import (
+    DocumentFileError,
+    parse_document,
+    read_upload,
     sanitize_filename,
 )
 
@@ -43,25 +44,16 @@ def upload_resume(
     db: Session = Depends(get_db),
 ) -> Resume:
     """Upload (201) or replace (200) the resume for this application."""
-    max_bytes = settings.max_upload_size_mb * 1024 * 1024
-
-    # Read one byte past the limit so oversized files are detected cheaply.
-    data = file.file.read(max_bytes + 1)
-    if len(data) > max_bytes:
-        raise HTTPException(
-            status_code=413,
-            detail=f"File too large. Maximum size is {settings.max_upload_size_mb} MB.",
-        )
-    if not data:
-        raise HTTPException(status_code=422, detail="Uploaded file is empty.")
-
     try:
-        parsed = parse_resume(file.filename or "", data, settings.max_resume_pages)
-    except ResumeFileError as exc:
+        data = read_upload(file.file, settings.max_upload_size_mb)
+        parsed = parse_document(
+            file.filename or "", data, settings.max_document_pages
+        )
+    except DocumentFileError as exc:
         raise HTTPException(status_code=exc.status_code, detail=exc.message)
 
     fields = {
-        "original_filename": sanitize_filename(file.filename or ""),
+        "original_filename": sanitize_filename(file.filename or "resume"),
         "file_type": parsed.file_type,
         "file_size_bytes": len(data),
         "page_count": parsed.page_count,

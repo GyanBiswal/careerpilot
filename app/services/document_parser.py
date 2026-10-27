@@ -1,7 +1,8 @@
-"""Validate an uploaded resume and extract its text.
+"""Validate an uploaded document and extract its text.
 
-Everything here works on bytes in memory. Nothing is written to disk, and the
-user-supplied filename is never used to build a path.
+Used for both resumes and job descriptions. Everything works on bytes in
+memory. Nothing is written to disk, and the user-supplied filename is never
+used to build a path.
 """
 import io
 import logging
@@ -9,20 +10,21 @@ import os
 import re
 import zipfile
 from dataclasses import dataclass
+from typing import BinaryIO
 
 import pymupdf
 from docx import Document
 from docx.table import Table
 from docx.text.paragraph import Paragraph
 
-logger = logging.getLogger("careerpilot.resume_parser")
+logger = logging.getLogger("careerpilot.document_parser")
 
 ALLOWED_EXTENSIONS = {".pdf": "pdf", ".docx": "docx"}
 MAX_DOCX_UNCOMPRESSED_BYTES = 50 * 1024 * 1024  # zip-bomb guard
 MAX_TEXT_CHARS = 100_000
 
 
-class ResumeFileError(Exception):
+class DocumentFileError(Exception):
     """A problem with the uploaded file, safe to show to the user."""
 
     def __init__(self, message: str, status_code: int = 422):
@@ -32,17 +34,31 @@ class ResumeFileError(Exception):
 
 
 @dataclass
-class ParsedResume:
+class ParsedDocument:
     text: str
     file_type: str  # "pdf" or "docx"
     page_count: int | None  # None for DOCX (pages aren't defined in the file)
+
+
+def read_upload(stream: BinaryIO, max_mb: int) -> bytes:
+    """Read an uploaded file, enforcing the size limit and rejecting empties."""
+    max_bytes = max_mb * 1024 * 1024
+    # Read one byte past the limit so oversized files are detected cheaply.
+    data = stream.read(max_bytes + 1)
+    if len(data) > max_bytes:
+        raise DocumentFileError(
+            f"File too large. Maximum size is {max_mb} MB.", 413
+        )
+    if not data:
+        raise DocumentFileError("Uploaded file is empty.", 422)
+    return data
 
 
 def sanitize_filename(name: str) -> str:
     """Make a filename safe to store and display (never used as a path)."""
     name = os.path.basename(name.replace("\\", "/"))
     name = re.sub(r"[^\w.\- ]", "_", name).strip()
-    return name[:255] or "resume"
+    return name[:255] or "document"
 
 
 def detect_file_type(filename: str, data: bytes) -> str:
@@ -50,7 +66,7 @@ def detect_file_type(filename: str, data: bytes) -> str:
     extension = os.path.splitext(filename.lower())[1]
     file_type = ALLOWED_EXTENSIONS.get(extension)
     if file_type is None:
-        raise ResumeFileError(
+        raise DocumentFileError(
             "Unsupported file type. Only PDF and DOCX files are allowed.", 415
         )
 
@@ -59,11 +75,12 @@ def detect_file_type(filename: str, data: bytes) -> str:
     else:
         matches = data.startswith(b"PK\x03\x04")  # DOCX is a ZIP archive
     if not matches:
-        raise ResumeFileError("File content does not match its extension.", 415)
+        raise DocumentFileError("File content does not match its extension.", 415)
     return file_type
 
 
-def _normalize_text(text: str) -> str:
+def normalize_text(text: str) -> str:
+    """Clean extracted or pasted text before storing it."""
     # PostgreSQL cannot store NUL characters, and some PDFs contain them.
     text = text.replace("\x00", "")
     lines = [re.sub(r"[ \t]+", " ", line).strip() for line in text.splitlines()]
@@ -74,9 +91,9 @@ def _normalize_text(text: str) -> str:
 def _extract_pdf(data: bytes, max_pages: int) -> tuple[str, int]:
     with pymupdf.open(stream=data, filetype="pdf") as doc:
         if doc.needs_pass:
-            raise ResumeFileError("Password-protected PDFs are not supported.")
+            raise DocumentFileError("Password-protected PDFs are not supported.")
         if doc.page_count > max_pages:
-            raise ResumeFileError(
+            raise DocumentFileError(
                 f"PDF has too many pages (maximum is {max_pages})."
             )
         pages = [page.get_text("text") for page in doc]
@@ -87,12 +104,12 @@ def _extract_docx(data: bytes) -> str:
     try:
         with zipfile.ZipFile(io.BytesIO(data)) as archive:
             if "word/document.xml" not in archive.namelist():
-                raise ResumeFileError("File is not a valid DOCX document.")
+                raise DocumentFileError("File is not a valid DOCX document.")
             total_size = sum(info.file_size for info in archive.infolist())
             if total_size > MAX_DOCX_UNCOMPRESSED_BYTES:
-                raise ResumeFileError("DOCX file is too large once unpacked.")
+                raise DocumentFileError("DOCX file is too large once unpacked.")
     except zipfile.BadZipFile:
-        raise ResumeFileError("File is corrupted or not a valid DOCX document.")
+        raise DocumentFileError("File is corrupted or not a valid DOCX document.")
 
     document = Document(io.BytesIO(data))
     parts: list[str] = []
@@ -108,7 +125,7 @@ def _extract_docx(data: bytes) -> str:
     return "\n".join(parts)
 
 
-def parse_resume(filename: str, data: bytes, max_pages: int) -> ParsedResume:
+def parse_document(filename: str, data: bytes, max_pages: int) -> ParsedDocument:
     file_type = detect_file_type(filename, data)
 
     try:
@@ -116,19 +133,19 @@ def parse_resume(filename: str, data: bytes, max_pages: int) -> ParsedResume:
             raw_text, page_count = _extract_pdf(data, max_pages)
         else:
             raw_text, page_count = _extract_docx(data), None
-    except ResumeFileError:
+    except DocumentFileError:
         raise
     except Exception:
         # Third-party parsers raise many different exception types on bad input.
         logger.exception("Failed to parse uploaded %s file", file_type)
-        raise ResumeFileError("Could not read this file. It may be corrupted.")
+        raise DocumentFileError("Could not read this file. It may be corrupted.")
 
-    text = _normalize_text(raw_text)
+    text = normalize_text(raw_text)
     if not text:
-        raise ResumeFileError(
+        raise DocumentFileError(
             "No text could be extracted. Scanned or image-only files are not supported."
         )
     if len(text) > MAX_TEXT_CHARS:
-        raise ResumeFileError("The resume text is too long to process.")
+        raise DocumentFileError("The document text is too long to process.")
 
-    return ParsedResume(text=text, file_type=file_type, page_count=page_count)
+    return ParsedDocument(text=text, file_type=file_type, page_count=page_count)
