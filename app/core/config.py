@@ -24,6 +24,12 @@ class Settings(BaseSettings):
     max_upload_size_mb: int = 5
     max_document_pages: int = 20
 
+    # LLM (Groq). The key is optional so the app still starts without it;
+    # AI endpoints return 503 until it is configured.
+    groq_api_key: str | None = None
+    groq_model: str = "openai/gpt-oss-120b"
+    llm_timeout_seconds: int = 60
+
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
 
