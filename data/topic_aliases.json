@@ -1,0 +1,18 @@
+{
+  "js": "javascript",
+  "node": "nodejs",
+  "node js": "nodejs",
+  "expressjs": "express",
+  "reactjs": "react",
+  "react js": "react",
+  "restful": "rest",
+  "postgres": "sql",
+  "postgresql": "sql",
+  "mysql": "sql",
+  "ml": "machine learning",
+  "dl": "deep learning",
+  "gen ai": "ai llm",
+  "generative ai": "ai llm",
+  "large language model": "llm",
+  "object oriented programming": "oop"
+}
