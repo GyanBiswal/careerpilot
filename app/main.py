@@ -1,4 +1,5 @@
 import logging
+from contextlib import asynccontextmanager
 
 from fastapi import Depends, FastAPI, HTTPException
 from sqlalchemy import text
@@ -10,11 +11,13 @@ from app.api.routes import (
     applications,
     auth,
     job_descriptions,
+    question_banks,
     resumes,
     users,
 )
 from app.core.config import get_settings
 from app.db.session import get_db
+from app.question_bank.loader import reload_store
 
 logging.basicConfig(
     level=logging.INFO,
@@ -24,10 +27,19 @@ logger = logging.getLogger("careerpilot")
 
 settings = get_settings()
 
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    # Load question banks at startup; every problem is logged, none are silent.
+    reload_store()
+    yield
+
+
 app = FastAPI(
     title=settings.app_name,
     version=settings.app_version,
     description="AI-powered interview preparation platform.",
+    lifespan=lifespan,
 )
 
 app.include_router(auth.router)
@@ -36,6 +48,7 @@ app.include_router(applications.router)
 app.include_router(resumes.router)
 app.include_router(job_descriptions.router)
 app.include_router(analysis.router)
+app.include_router(question_banks.router)
 
 
 @app.get("/health", tags=["Health"])

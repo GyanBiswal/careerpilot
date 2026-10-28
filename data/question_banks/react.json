@@ -1,0 +1,919 @@
+[
+  {
+    "id": "react_001",
+    "topic": "React Fundamentals",
+    "subtopic": "What is React",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is React, and why is it used?",
+    "sample_answer": "React is a JavaScript library for building user interfaces. It lets developers create reusable components and update the UI efficiently when data changes.",
+    "key_concepts": [
+      "UI library",
+      "components",
+      "reusability",
+      "declarative rendering"
+    ],
+    "follow_up_questions": [
+      "What are the advantages of component-based development?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_002",
+    "topic": "React Fundamentals",
+    "subtopic": "JSX",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is JSX, and why do we use it?",
+    "sample_answer": "JSX is a syntax extension that lets us describe UI using HTML-like markup inside JavaScript. Build tools transform JSX into JavaScript that React can use to create elements.",
+    "key_concepts": [
+      "JSX",
+      "JavaScript expressions",
+      "React elements"
+    ],
+    "follow_up_questions": [
+      "How do you insert a JavaScript expression inside JSX?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_003",
+    "topic": "React Fundamentals",
+    "subtopic": "Components",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is a React component?",
+    "sample_answer": "A component is a reusable piece of UI. In modern React, components are commonly JavaScript functions that receive props and return JSX describing what should appear on the screen.",
+    "key_concepts": [
+      "components",
+      "reusability",
+      "functional components",
+      "JSX"
+    ],
+    "follow_up_questions": [
+      "How do you pass data from one component to another?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_004",
+    "topic": "React Fundamentals",
+    "subtopic": "Props vs State",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between props and state?",
+    "sample_answer": "Props are inputs passed to a component, usually from its parent. State is data managed by a component or another state-management mechanism. Updating state can trigger a re-render.",
+    "key_concepts": [
+      "props",
+      "state",
+      "data flow",
+      "re-rendering"
+    ],
+    "follow_up_questions": [
+      "When would you lift state to a parent component?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_005",
+    "topic": "React Hooks",
+    "subtopic": "Rules of Hooks",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What are React Hooks, and what rules must you follow when using them?",
+    "sample_answer": "Hooks let function components use features such as state and effects. Call Hooks at the top level of React function components or custom Hooks, not inside loops, conditions, or nested functions.",
+    "key_concepts": [
+      "Hooks",
+      "Rules of Hooks",
+      "function components",
+      "custom Hooks"
+    ],
+    "follow_up_questions": [
+      "Why should Hooks not be called conditionally?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_006",
+    "topic": "React Hooks",
+    "subtopic": "useState",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is useState, and how does it work?",
+    "sample_answer": "useState adds state to a function component. It returns the current value and a setter function. Calling the setter requests a re-render with the updated state.",
+    "key_concepts": [
+      "useState",
+      "state setter",
+      "rendering"
+    ],
+    "follow_up_questions": [
+      "When should you use the functional form of a state setter?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_007",
+    "topic": "React Hooks",
+    "subtopic": "State Updates",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why might calling a state setter not immediately change the state variable?",
+    "sample_answer": "A state setter schedules an update rather than changing the value in the currently running render. The current function continues to see its render's state snapshot, and React can batch updates before rendering again.",
+    "key_concepts": [
+      "state snapshots",
+      "batching",
+      "state updates"
+    ],
+    "follow_up_questions": [
+      "Why can multiple setCount(count + 1) calls produce only one increment?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_008",
+    "topic": "React Hooks",
+    "subtopic": "useEffect",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is useEffect, and when would you use it?",
+    "sample_answer": "useEffect synchronizes a component with external systems, such as APIs, subscriptions, timers, or browser APIs. It runs after a render when its dependencies require the effect to re-run.",
+    "key_concepts": [
+      "useEffect",
+      "side effects",
+      "external systems",
+      "dependencies"
+    ],
+    "follow_up_questions": [
+      "What is the difference between useEffect with no dependency array and an empty dependency array?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_009",
+    "topic": "React Hooks",
+    "subtopic": "Effect Cleanup",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the cleanup function in useEffect, and why is it important?",
+    "sample_answer": "An effect can return a cleanup function to undo setup, such as removing an event listener, clearing a timer, or unsubscribing. React runs cleanup before re-running an effect with changed dependencies and when the component unmounts.",
+    "key_concepts": [
+      "effect cleanup",
+      "event listeners",
+      "timers",
+      "unmounting"
+    ],
+    "follow_up_questions": [
+      "How would you clean up a timer created inside useEffect?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_010",
+    "topic": "React Hooks",
+    "subtopic": "useContext",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is useContext, and when would you use it?",
+    "sample_answer": "useContext reads a value from a React context provider above the component. It helps share values such as the current user, theme, or locale without passing props through every intermediate component.",
+    "key_concepts": [
+      "Context API",
+      "useContext",
+      "prop drilling",
+      "shared data"
+    ],
+    "follow_up_questions": [
+      "When might Context be a poor choice for frequently changing state?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_011",
+    "topic": "React Hooks",
+    "subtopic": "useRef",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is useRef, and how is it different from useState?",
+    "sample_answer": "useRef stores a mutable value that persists across renders without triggering a re-render when changed. It is useful for DOM references, timer IDs, and other values that do not directly determine the displayed UI.",
+    "key_concepts": [
+      "useRef",
+      "persistent values",
+      "DOM references",
+      "re-rendering"
+    ],
+    "follow_up_questions": [
+      "How would you focus an input using useRef?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_012",
+    "topic": "React Components",
+    "subtopic": "Lists and Keys",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why does React need keys when rendering lists?",
+    "sample_answer": "Keys help React identify which list items were added, removed, or changed. Stable, unique keys among siblings help React update the correct elements. Array indexes can be problematic when items are reordered or removed.",
+    "key_concepts": [
+      "keys",
+      "reconciliation",
+      "stable identity",
+      "list rendering"
+    ],
+    "follow_up_questions": [
+      "Why should you avoid using a random value as a key on every render?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_013",
+    "topic": "React Components",
+    "subtopic": "Conditional Rendering",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do you conditionally render UI in React?",
+    "sample_answer": "I use JavaScript conditions such as if statements, ternary expressions, or logical AND inside JSX. The choice depends on whether I need different branches, an alternative view, or optional content.",
+    "key_concepts": [
+      "conditional rendering",
+      "ternary operator",
+      "logical AND"
+    ],
+    "follow_up_questions": [
+      "What issue can occur when using count && <Component /> if count is zero?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "react_014",
+    "topic": "React Forms",
+    "subtopic": "Controlled vs Uncontrolled Components",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between controlled and uncontrolled form inputs?",
+    "sample_answer": "A controlled input gets its value from React state and updates through an event handler. An uncontrolled input keeps its value in the DOM, which can be read using a ref or form APIs.",
+    "key_concepts": [
+      "controlled inputs",
+      "uncontrolled inputs",
+      "form state",
+      "refs"
+    ],
+    "follow_up_questions": [
+      "Which approach would you choose for a form that needs live validation?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_015",
+    "topic": "React State Management",
+    "subtopic": "Lifting State Up",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What does lifting state up mean in React?",
+    "sample_answer": "Lifting state up means moving shared state to the closest common parent of components that need it. The parent passes the state and update callbacks through props so the components stay in sync.",
+    "key_concepts": [
+      "shared state",
+      "common parent",
+      "props",
+      "single source of truth"
+    ],
+    "follow_up_questions": [
+      "When would Context be more suitable than lifting state through several levels?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_016",
+    "topic": "React API Integration",
+    "subtopic": "Fetching Data",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you fetch data from an API and display it in React?",
+    "sample_answer": "I would trigger the request through an effect or a suitable data-fetching library, store the result in state, and render it. I would also handle loading, empty, and error states, and avoid applying stale results after the request is no longer relevant.",
+    "key_concepts": [
+      "API integration",
+      "fetch",
+      "state",
+      "loading state",
+      "error handling"
+    ],
+    "follow_up_questions": [
+      "How would you prevent an outdated request from replacing newer search results?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_017",
+    "topic": "React Rendering",
+    "subtopic": "Re-rendering",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What causes a React component to re-render?",
+    "sample_answer": "A component can re-render when its state changes, when its parent renders, or when a context value it consumes changes. A re-render does not necessarily mean the DOM will change; React determines which updates are needed.",
+    "key_concepts": [
+      "state updates",
+      "parent rendering",
+      "context",
+      "reconciliation"
+    ],
+    "follow_up_questions": [
+      "Does every re-render cause a full page refresh?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_018",
+    "topic": "React Hooks",
+    "subtopic": "useMemo and useCallback",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between useMemo and useCallback?",
+    "sample_answer": "useMemo caches a calculated value between renders when dependencies have not changed. useCallback caches a function reference under the same condition. Both are performance optimizations and should be used when they provide a measurable benefit.",
+    "key_concepts": [
+      "useMemo",
+      "useCallback",
+      "memoization",
+      "dependencies"
+    ],
+    "follow_up_questions": [
+      "Why is it unnecessary to wrap every function in useCallback?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_019",
+    "topic": "React Fundamentals",
+    "subtopic": "Component Lifecycle",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What are the main component lifecycle concepts in React?",
+    "sample_answer": "The main phases are mounting, updating, and unmounting. With function components, effects can synchronize with external systems after rendering and clean up when dependencies change or the component unmounts.",
+    "key_concepts": [
+      "mounting",
+      "updating",
+      "unmounting",
+      "effects"
+    ],
+    "follow_up_questions": [
+      "How do effect cleanup and unmounting relate to each other?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_020",
+    "topic": "React Hooks",
+    "subtopic": "Effect Dependencies",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How does the dependency array in useEffect work?",
+    "sample_answer": "The dependency array tells React which reactive values an effect uses. React compares dependencies between renders and re-runs the effect when one changes. Omitting the array runs the effect after every commit; an empty array means it has no reactive dependencies.",
+    "key_concepts": [
+      "dependency array",
+      "effect execution",
+      "reactive values",
+      "stale closures"
+    ],
+    "follow_up_questions": [
+      "What problems can happen when a required dependency is omitted?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_021",
+    "topic": "React State Management",
+    "subtopic": "Context API vs Props",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "When would you use props, Context API, or local component state?",
+    "sample_answer": "I use local state for data owned by one component, props for explicit parent-to-child communication, and Context for values needed across a component subtree. I choose the simplest option that keeps ownership and data flow clear.",
+    "key_concepts": [
+      "local state",
+      "props",
+      "Context API",
+      "state ownership"
+    ],
+    "follow_up_questions": [
+      "When might a dedicated state-management library be useful?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_022",
+    "topic": "React API Integration",
+    "subtopic": "Loading and Error States",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How should a React component handle loading, success, empty, and error states?",
+    "sample_answer": "I model the request status clearly and render the appropriate UI for each state. I handle failed HTTP responses as well as network errors, provide useful feedback, and allow retrying when appropriate.",
+    "key_concepts": [
+      "request states",
+      "HTTP errors",
+      "empty states",
+      "retry",
+      "user feedback"
+    ],
+    "follow_up_questions": [
+      "Why does fetch require checking response.ok?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_023",
+    "topic": "React Components",
+    "subtopic": "Component Composition",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is component composition in React?",
+    "sample_answer": "Component composition means building complex interfaces by combining smaller components. Props such as children let a component define a reusable layout while allowing callers to supply its content.",
+    "key_concepts": [
+      "composition",
+      "children",
+      "reusability",
+      "component design"
+    ],
+    "follow_up_questions": [
+      "How can composition reduce the need for deeply nested conditional logic?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "react_024",
+    "topic": "React Hooks",
+    "subtopic": "Custom Hooks",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "When would you create a custom Hook, and what should it contain?",
+    "sample_answer": "I create a custom Hook when multiple components need the same stateful logic or effect behavior. It can call built-in Hooks and return the values or functions consumers need. It shares logic, not one shared state instance by default.",
+    "key_concepts": [
+      "custom Hooks",
+      "logic reuse",
+      "state isolation",
+      "Hook rules"
+    ],
+    "follow_up_questions": [
+      "How would you test a custom Hook that fetches and caches data?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_025",
+    "topic": "React Performance",
+    "subtopic": "Unnecessary Re-renders",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A component re-renders too often. How would you identify and reduce unnecessary re-renders?",
+    "sample_answer": "I would use React DevTools Profiler to identify the components and interactions causing extra work. Then I would review state placement, context updates, and unstable object or function props. I would apply memoization only where profiling shows a meaningful improvement.",
+    "key_concepts": [
+      "React Profiler",
+      "state placement",
+      "React.memo",
+      "referential equality",
+      "memoization"
+    ],
+    "follow_up_questions": [
+      "Why might React.memo fail to prevent a child from re-rendering?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_026",
+    "topic": "React Performance",
+    "subtopic": "Profiling and Optimization",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you investigate a slow React page with a large list and several interactive filters?",
+    "sample_answer": "I would reproduce the slowdown and profile render and commit work with React DevTools, while checking browser performance traces for scripting and layout costs. Depending on the bottleneck, I might reduce redundant state updates, memoize expensive calculations, or virtualize the list. I would measure again to confirm the improvement.",
+    "key_concepts": [
+      "React Profiler",
+      "browser performance tools",
+      "list virtualization",
+      "render cost",
+      "measurement"
+    ],
+    "follow_up_questions": [
+      "How would you determine whether the bottleneck is React rendering or expensive browser layout?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_027",
+    "topic": "React Hooks",
+    "subtopic": "Stale Closures and Effect Dependencies",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "An interval created inside useEffect keeps reading an old state value. How would you fix it?",
+    "sample_answer": "The callback may have captured a state value from an earlier render. Depending on the requirement, I would use a functional state update, correct the effect dependencies and recreate the interval when needed, or use a ref for a value that must remain current without restarting the interval.",
+    "key_concepts": [
+      "stale closures",
+      "functional state updates",
+      "effect dependencies",
+      "useRef"
+    ],
+    "follow_up_questions": [
+      "What trade-offs arise if the interval is recreated after every state change?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_028",
+    "topic": "React State Management",
+    "subtopic": "Choosing a State Management Approach",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do you decide between local state, Context API, a state-management library, and a server-state library?",
+    "sample_answer": "I keep component-specific state local, use Context for suitable shared values, and consider a state-management library for complex client-side state and coordinated updates. For remote data, a server-state library can handle caching, refetching, and request lifecycle concerns. The choice depends on complexity and team needs.",
+    "key_concepts": [
+      "state ownership",
+      "Context API",
+      "client state",
+      "server state",
+      "caching"
+    ],
+    "follow_up_questions": [
+      "Why should API response data not always be duplicated into global client state?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_029",
+    "topic": "React Architecture",
+    "subtopic": "Component Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you structure React components in a growing application to keep them reusable and maintainable?",
+    "sample_answer": "I organize components around clear responsibilities and feature boundaries. I separate reusable UI from feature-specific behavior where useful, keep state close to its owner, define clear props, and extract shared logic into custom Hooks when that improves clarity.",
+    "key_concepts": [
+      "component boundaries",
+      "feature-based organization",
+      "separation of concerns",
+      "reusability"
+    ],
+    "follow_up_questions": [
+      "How do you decide whether a component should be split into smaller components?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_030",
+    "topic": "React Performance",
+    "subtopic": "useMemo and useCallback Decisions",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "When do useMemo, useCallback, and React.memo help, and when can they add unnecessary complexity?",
+    "sample_answer": "They can help when expensive calculations or stable references prevent meaningful downstream work. They add overhead and complexity when applied indiscriminately or when dependencies change every render. I profile first and optimize only when there is a clear benefit.",
+    "key_concepts": [
+      "useMemo",
+      "useCallback",
+      "React.memo",
+      "profiling",
+      "referential equality"
+    ],
+    "follow_up_questions": [
+      "How can creating a new object in a parent render defeat memoization in a child?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_031",
+    "topic": "React API Integration",
+    "subtopic": "Race Conditions and Stale Responses",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A search component sends requests as the user types, but older responses sometimes overwrite newer results. How would you fix this?",
+    "sample_answer": "I would cancel obsolete requests with AbortController where possible, or track request identifiers and apply a response only if it matches the latest request. I would also consider debouncing input and ensure cleanup prevents stale updates.",
+    "key_concepts": [
+      "race conditions",
+      "AbortController",
+      "request identity",
+      "debouncing",
+      "effect cleanup"
+    ],
+    "follow_up_questions": [
+      "Why is debouncing alone not enough to prevent stale responses?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_032",
+    "topic": "React Hooks",
+    "subtopic": "Context Performance",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A Context provider updates frequently, causing many consumers to re-render. What would you investigate?",
+    "sample_answer": "I would inspect provider value identity and which consumers actually need each value. I might stabilize calculated values where appropriate, split unrelated contexts, move rapidly changing state closer to its consumers, or use a more targeted subscription approach if needed.",
+    "key_concepts": [
+      "Context propagation",
+      "provider value identity",
+      "context splitting",
+      "state locality"
+    ],
+    "follow_up_questions": [
+      "Why can wrapping a provider value in useMemo help, and what does it not solve?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_033",
+    "topic": "React Debugging",
+    "subtopic": "Infinite Effect Loops",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A component enters an infinite re-render or effect loop after a recent change. How would you debug it?",
+    "sample_answer": "I would identify which state update triggers the next render and inspect effect dependencies. Common causes include setting state on every effect run or depending on an object or function recreated on each render. I would correct the underlying data flow rather than suppressing dependencies blindly.",
+    "key_concepts": [
+      "effect dependencies",
+      "state updates",
+      "referential identity",
+      "React DevTools"
+    ],
+    "follow_up_questions": [
+      "Why is removing a dependency from the array not necessarily a correct fix?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_034",
+    "topic": "React Forms",
+    "subtopic": "Large Form Architecture",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you design a large form with validation, conditional fields, and server-side errors?",
+    "sample_answer": "I would define a clear form state model, separate field presentation from validation and submission logic, and use reusable field components or a form library when appropriate. I would distinguish client-side validation from server errors, preserve accessible error messages, and avoid unnecessary updates across unrelated fields.",
+    "key_concepts": [
+      "form state",
+      "validation",
+      "server errors",
+      "reusable components",
+      "accessibility"
+    ],
+    "follow_up_questions": [
+      "When might an uncontrolled form approach improve performance?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "react_035",
+    "topic": "React Architecture",
+    "subtopic": "Error Boundaries and Resilience",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you prevent a rendering error in one part of a React application from breaking the entire UI?",
+    "sample_answer": "I would use error boundaries around appropriate parts of the component tree to display fallback UI when descendant rendering or lifecycle work fails. I would log diagnostic details and provide a recovery path. Error boundaries do not automatically catch every asynchronous error or event-handler exception.",
+    "key_concepts": [
+      "error boundaries",
+      "fallback UI",
+      "error logging",
+      "fault isolation"
+    ],
+    "follow_up_questions": [
+      "Which kinds of errors are not caught by React error boundaries?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_036",
+    "topic": "React Performance",
+    "subtopic": "Expensive Derived State",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A component stores both source data and values calculated from that data in state. What problems can this cause?",
+    "sample_answer": "Duplicating derived data in state can create synchronization bugs and extra updates. I would calculate derived values during rendering when inexpensive, and use memoization for genuinely expensive calculations when profiling supports it.",
+    "key_concepts": [
+      "derived state",
+      "single source of truth",
+      "synchronization",
+      "useMemo"
+    ],
+    "follow_up_questions": [
+      "When is storing a derived-looking value in state justified?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_037",
+    "topic": "React Debugging",
+    "subtopic": "Effects Running Twice in Development",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why might an effect run an extra setup and cleanup cycle in development, and how should you respond?",
+    "sample_answer": "When Strict Mode is enabled, React may run an additional setup and cleanup cycle in development to help reveal unsafe effect behavior. I would make setup and cleanup symmetrical and ensure effects are safe to repeat, rather than disabling Strict Mode to hide the problem.",
+    "key_concepts": [
+      "Strict Mode",
+      "effect lifecycle",
+      "cleanup",
+      "idempotent setup"
+    ],
+    "follow_up_questions": [
+      "How could an effect that starts a subscription reveal a missing cleanup function?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "react_038",
+    "topic": "React Performance",
+    "subtopic": "Code Splitting",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you reduce the initial loading cost of a large React application?",
+    "sample_answer": "I would inspect bundle and network analysis first, then consider route-level code splitting with lazy loading, removing unused dependencies, and optimizing assets. I would measure the initial JavaScript payload and user-perceived loading performance after changes.",
+    "key_concepts": [
+      "code splitting",
+      "React.lazy",
+      "Suspense",
+      "bundle analysis",
+      "lazy loading"
+    ],
+    "follow_up_questions": [
+      "What user experience should be shown while a lazy-loaded component is loading?"
+    ],
+    "estimated_time_minutes": 4
+  }
+]

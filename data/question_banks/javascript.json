@@ -1,0 +1,1000 @@
+[
+  {
+    "id": "javascript_001",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "var, let, and const",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between var, let, and const?",
+    "sample_answer": "var is function-scoped and can be redeclared. let and const are block-scoped. let can be reassigned, while const cannot be reassigned. const objects and arrays can still be modified.",
+    "key_concepts": [
+      "scope",
+      "redeclaration",
+      "reassignment",
+      "block scope"
+    ],
+    "follow_up_questions": [
+      "Why is const commonly preferred by default?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_002",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Data Types",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What are the primitive and non-primitive data types in JavaScript?",
+    "sample_answer": "Primitive types include string, number, bigint, boolean, undefined, symbol, and null. Objects, arrays, and functions are reference-type values.",
+    "key_concepts": [
+      "primitive types",
+      "reference types",
+      "typeof"
+    ],
+    "follow_up_questions": [
+      "What does typeof null return?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_003",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Type Coercion and Equality",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between == and === in JavaScript?",
+    "sample_answer": "The == operator allows type coercion before comparison, while === compares values without converting their types. I generally prefer === to avoid unexpected comparisons.",
+    "key_concepts": [
+      "strict equality",
+      "loose equality",
+      "type coercion"
+    ],
+    "follow_up_questions": [
+      "What is the result of 5 == \"5\" and 5 === \"5\"?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_004",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Scope",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between global, function, and block scope?",
+    "sample_answer": "Global scope makes a variable accessible broadly, function scope limits it to a function, and block scope limits it to a block such as an if statement. let and const are block-scoped, while var is function-scoped.",
+    "key_concepts": [
+      "global scope",
+      "function scope",
+      "block scope",
+      "lexical scope"
+    ],
+    "follow_up_questions": [
+      "Why can a var variable declared inside an if block be accessed outside it?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_005",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Hoisting",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is hoisting in JavaScript?",
+    "sample_answer": "Hoisting describes how declarations are processed before code execution. var declarations are initialized with undefined, while let and const remain uninitialized until their declaration is evaluated. Function declarations can be called before their definition.",
+    "key_concepts": [
+      "hoisting",
+      "temporal dead zone",
+      "function declarations"
+    ],
+    "follow_up_questions": [
+      "What happens when you access a let variable before its declaration?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_006",
+    "topic": "Functions",
+    "subtopic": "Function Declarations and Expressions",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between a function declaration and a function expression?",
+    "sample_answer": "A function declaration defines a named function and is available before its position in the code. A function expression assigns a function to a variable and follows that variable's initialization rules.",
+    "key_concepts": [
+      "function declaration",
+      "function expression",
+      "hoisting"
+    ],
+    "follow_up_questions": [
+      "Can a function expression be anonymous?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_007",
+    "topic": "Functions",
+    "subtopic": "Arrow Functions",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How are arrow functions different from regular functions?",
+    "sample_answer": "Arrow functions have shorter syntax and inherit this from their surrounding lexical scope. They do not have their own arguments object and cannot be used as constructors with new.",
+    "key_concepts": [
+      "arrow functions",
+      "lexical this",
+      "arguments",
+      "constructors"
+    ],
+    "follow_up_questions": [
+      "When might a regular function be a better choice?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_008",
+    "topic": "Functions",
+    "subtopic": "Closures",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is a closure in JavaScript?",
+    "sample_answer": "A closure occurs when a function retains access to variables from its surrounding lexical scope, even after the outer function has finished executing. Closures are useful for callbacks, private state, and function factories.",
+    "key_concepts": [
+      "closure",
+      "lexical environment",
+      "scope"
+    ],
+    "follow_up_questions": [
+      "How can closures be used to maintain private state?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_009",
+    "topic": "Functions",
+    "subtopic": "this Keyword",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How does the this keyword work in JavaScript?",
+    "sample_answer": "In a regular function, this generally depends on how the function is called. In a method call, it refers to the object before the dot. Arrow functions inherit this from their surrounding scope.",
+    "key_concepts": [
+      "this",
+      "method invocation",
+      "lexical binding"
+    ],
+    "follow_up_questions": [
+      "What happens to this when an object method is assigned to a standalone variable?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_010",
+    "topic": "Objects and Arrays",
+    "subtopic": "Destructuring",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is destructuring in JavaScript?",
+    "sample_answer": "Destructuring extracts values from arrays or properties from objects into variables. It makes code shorter and improves readability when working with structured data.",
+    "key_concepts": [
+      "array destructuring",
+      "object destructuring",
+      "default values"
+    ],
+    "follow_up_questions": [
+      "How do you rename a variable while destructuring an object?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_011",
+    "topic": "Objects and Arrays",
+    "subtopic": "Spread and Rest",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between spread and rest syntax?",
+    "sample_answer": "Spread expands an iterable or object into individual elements or properties. Rest collects remaining elements or properties into an array or object, or remaining function arguments into an array.",
+    "key_concepts": [
+      "spread syntax",
+      "rest parameters",
+      "shallow copy"
+    ],
+    "follow_up_questions": [
+      "Does spreading a nested object create a deep copy?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_012",
+    "topic": "Objects and Arrays",
+    "subtopic": "map, filter, and reduce",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between map(), filter(), and reduce()?",
+    "sample_answer": "map transforms each element and returns a new array. filter returns elements that satisfy a condition. reduce combines elements into a single accumulated result, such as a sum or grouped object.",
+    "key_concepts": [
+      "array methods",
+      "transformation",
+      "filtering",
+      "accumulation"
+    ],
+    "follow_up_questions": [
+      "Which method would you use to calculate the total price of a shopping cart?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_013",
+    "topic": "Objects and Arrays",
+    "subtopic": "Mutation and Copying",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between mutating an array and creating a new array?",
+    "sample_answer": "Mutation changes the existing array, while creating a new array leaves the original unchanged. Methods such as push mutate an array, while map and filter return new arrays. Spread can create a shallow copy.",
+    "key_concepts": [
+      "mutation",
+      "immutability",
+      "shallow copy"
+    ],
+    "follow_up_questions": [
+      "Why is avoiding direct state mutation important in React?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_014",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Callbacks and Promises",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is a callback, and how does a Promise improve asynchronous code?",
+    "sample_answer": "A callback is a function passed to another function to run later. Promises represent the eventual success or failure of an asynchronous operation and support chaining, which helps organize asynchronous workflows.",
+    "key_concepts": [
+      "callbacks",
+      "Promise",
+      "then",
+      "catch"
+    ],
+    "follow_up_questions": [
+      "What is callback hell, and how can Promises help avoid it?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_015",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "async and await",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How do async and await work in JavaScript?",
+    "sample_answer": "An async function always returns a Promise. The await keyword pauses that function's execution until a Promise settles, allowing asynchronous code to be written in a readable, sequential style.",
+    "key_concepts": [
+      "async",
+      "await",
+      "Promise",
+      "asynchronous execution"
+    ],
+    "follow_up_questions": [
+      "How do you handle an error thrown by an awaited operation?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_016",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Event Loop",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the JavaScript event loop?",
+    "sample_answer": "The event loop coordinates execution between the call stack and queued asynchronous callbacks. Once the current synchronous work finishes, queued work can run according to the event loop's scheduling rules.",
+    "key_concepts": [
+      "call stack",
+      "event loop",
+      "task queues",
+      "non-blocking I/O"
+    ],
+    "follow_up_questions": [
+      "Why can a long-running synchronous function delay a timer?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_017",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Microtasks and Macrotasks",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between microtasks and macrotasks?",
+    "sample_answer": "Promise callbacks and queueMicrotask callbacks are microtasks. Timer callbacks and many event callbacks are tasks, often informally called macrotasks. After the current stack finishes, microtasks are processed before the next task is taken.",
+    "key_concepts": [
+      "microtask queue",
+      "task queue",
+      "Promise callbacks",
+      "setTimeout"
+    ],
+    "follow_up_questions": [
+      "What usually runs first: a Promise callback or a setTimeout callback scheduled for zero milliseconds?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_018",
+    "topic": "Error Handling",
+    "subtopic": "try, catch, and finally",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How do try, catch, and finally work in JavaScript?",
+    "sample_answer": "try contains code that may throw an error, catch handles the error, and finally runs after the try/catch flow whether or not an error occurred. It is useful for cleanup.",
+    "key_concepts": [
+      "exceptions",
+      "try",
+      "catch",
+      "finally"
+    ],
+    "follow_up_questions": [
+      "How do you handle errors from an async function?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_019",
+    "topic": "JavaScript Modules",
+    "subtopic": "ES Modules",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What are ES modules, and what is the difference between named and default exports?",
+    "sample_answer": "ES modules split code into reusable files using import and export. A module can have multiple named exports and at most one default export. Named imports use the exported name, while default imports can choose a local name.",
+    "key_concepts": [
+      "import",
+      "export",
+      "named exports",
+      "default export"
+    ],
+    "follow_up_questions": [
+      "Why are modules useful in a large application?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_020",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Output Prediction",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the output, and why? console.log(typeof null); console.log([] == false);",
+    "sample_answer": "The output is \"object\" and true. typeof null is a historical JavaScript behavior. In the second comparison, loose equality performs type conversions that make the comparison true; strict equality avoids this coercion.",
+    "key_concepts": [
+      "typeof",
+      "type coercion",
+      "loose equality"
+    ],
+    "follow_up_questions": [
+      "What would [] === false return?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_021",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Promise.all",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What does Promise.all() do?",
+    "sample_answer": "Promise.all accepts an iterable of promises and fulfills with their results when all fulfill. It rejects as soon as one input rejects, although the other operations are not automatically cancelled.",
+    "key_concepts": [
+      "Promise.all",
+      "parallel operations",
+      "rejection"
+    ],
+    "follow_up_questions": [
+      "When would Promise.allSettled() be more suitable?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_022",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Optional Chaining and Nullish Coalescing",
+    "difficulty": "easy",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What do optional chaining (?.) and nullish coalescing (??) do?",
+    "sample_answer": "Optional chaining safely accesses a property or method when an intermediate value may be null or undefined. Nullish coalescing supplies a fallback only when the left side is null or undefined, unlike ||, which also treats values such as 0 and an empty string as falsy.",
+    "key_concepts": [
+      "optional chaining",
+      "nullish coalescing",
+      "null",
+      "undefined"
+    ],
+    "follow_up_questions": [
+      "When would you use ?? instead of || for a numeric setting?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_023",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "fetch and HTTP Errors",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How do you fetch data from an API and handle HTTP errors?",
+    "sample_answer": "I use fetch with async/await, check response.ok because HTTP error statuses do not normally reject the fetch Promise, and then parse the response. I handle network or parsing errors with try/catch and show an appropriate error state.",
+    "key_concepts": [
+      "fetch",
+      "response.ok",
+      "HTTP status",
+      "try/catch"
+    ],
+    "follow_up_questions": [
+      "What is the difference between a network failure and an HTTP 404 response?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_024",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Pass by Value and References",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How are objects passed to functions in JavaScript?",
+    "sample_answer": "JavaScript passes arguments by value. For objects, that value is a reference to the object, so a function can mutate the object's properties, but reassigning its local parameter does not reassign the caller's variable.",
+    "key_concepts": [
+      "pass by value",
+      "object references",
+      "mutation",
+      "parameter reassignment"
+    ],
+    "follow_up_questions": [
+      "How can you avoid accidentally modifying an object passed into a function?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_025",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "JSON",
+    "difficulty": "easy",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is JSON, and how do JSON.stringify() and JSON.parse() work?",
+    "sample_answer": "JSON is a text format for exchanging structured data. JSON.stringify converts supported JavaScript values into JSON text, while JSON.parse converts valid JSON text into JavaScript values.",
+    "key_concepts": [
+      "JSON",
+      "serialization",
+      "parsing",
+      "API data"
+    ],
+    "follow_up_questions": [
+      "Why should JSON.parse() be handled carefully when input may be invalid?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "javascript_026",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Failure Handling",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How do you design reliable failure handling for asynchronous operations in a production application?",
+    "sample_answer": "I distinguish expected failures from unexpected ones, handle Promise rejections explicitly, and use timeouts, bounded retries, and backoff where appropriate. I avoid retrying non-idempotent operations blindly, log useful context, and return safe, consistent errors to callers.",
+    "key_concepts": [
+      "Promise rejection",
+      "timeouts",
+      "retry with backoff",
+      "idempotency",
+      "observability"
+    ],
+    "follow_up_questions": [
+      "How would you prevent retries from creating duplicate payments?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_027",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Promise Combinators",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "When would you choose Promise.all(), Promise.allSettled(), Promise.race(), or Promise.any()?",
+    "sample_answer": "Promise.all requires every input to fulfill. Promise.allSettled reports each outcome. Promise.race settles with the first settled input, while Promise.any fulfills with the first fulfillment and rejects only if all inputs reject. The choice depends on the required failure and completion behavior.",
+    "key_concepts": [
+      "Promise combinators",
+      "partial failure",
+      "first settlement",
+      "first fulfillment"
+    ],
+    "follow_up_questions": [
+      "How would you collect independent API results when some requests may fail?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_028",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Cancellation and Timeouts",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you cancel an API request that is no longer needed?",
+    "sample_answer": "For fetch, I use AbortController and pass its signal to the request. I abort when a component unmounts, a newer search replaces an older one, or a timeout expires. I distinguish intentional cancellation from genuine request failures.",
+    "key_concepts": [
+      "AbortController",
+      "AbortSignal",
+      "request cancellation",
+      "race conditions"
+    ],
+    "follow_up_questions": [
+      "How would you prevent an older search response from overwriting newer results?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_029",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Memory Leaks",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What causes memory leaks in JavaScript applications, and how do you investigate them?",
+    "sample_answer": "Leaks can come from unremoved event listeners, uncleared timers, retained closures, growing caches, or detached DOM elements that remain referenced. I compare heap snapshots, inspect retaining paths, reproduce the behavior, and verify that memory stabilizes after cleanup.",
+    "key_concepts": [
+      "garbage collection",
+      "heap snapshots",
+      "retaining paths",
+      "event listeners",
+      "detached DOM"
+    ],
+    "follow_up_questions": [
+      "How would you determine whether a growing heap is a leak or legitimate caching?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_030",
+    "topic": "Performance",
+    "subtopic": "Large Array Processing",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "An endpoint processes a very large array using several chained map() and filter() calls. How would you improve performance?",
+    "sample_answer": "I would profile first, check the data size and dominant costs, and avoid unnecessary intermediate arrays if they are significant. I might combine passes, process data in chunks, or move expensive work to a worker. I would verify the change with benchmarks and preserve correctness.",
+    "key_concepts": [
+      "profiling",
+      "intermediate allocations",
+      "time complexity",
+      "chunking",
+      "Web Workers"
+    ],
+    "follow_up_questions": [
+      "When would a single reduce pass make the code worse rather than better?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_031",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Event Loop Bottlenecks",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "A Node.js API becomes unresponsive during CPU-heavy processing. What would you investigate and change?",
+    "sample_answer": "I would use profiling and event-loop delay metrics to identify blocking synchronous work. I would reduce unnecessary computation, process large inputs in chunks where suitable, and move CPU-intensive tasks to worker threads or a separate job service. I would also add safeguards for expensive requests.",
+    "key_concepts": [
+      "event-loop delay",
+      "CPU-bound work",
+      "worker threads",
+      "profiling",
+      "backpressure"
+    ],
+    "follow_up_questions": [
+      "Why do async functions not automatically make CPU-heavy code non-blocking?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_032",
+    "topic": "Debugging",
+    "subtopic": "Unhandled Promise Rejections",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "A production process reports unhandled Promise rejections intermittently. How would you debug the issue?",
+    "sample_answer": "I would trace the failing operation with structured logs and request context, inspect every asynchronous branch, and ensure each rejection is awaited, returned, or handled. I would reproduce the timing conditions, add regression tests, and avoid silently swallowing errors.",
+    "key_concepts": [
+      "unhandled rejection",
+      "Promise chains",
+      "async control flow",
+      "structured logging",
+      "regression tests"
+    ],
+    "follow_up_questions": [
+      "Why can omitting return inside a Promise chain hide a failure from the caller?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_033",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Closures and Retained State",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How can closures unintentionally retain memory, and how would you avoid that?",
+    "sample_answer": "A long-lived closure can keep referenced objects reachable even when the application no longer needs them. I keep captured state minimal, release references when appropriate, clean up subscriptions and listeners, and confirm the cause using heap snapshots rather than avoiding closures altogether.",
+    "key_concepts": [
+      "lexical environment",
+      "object reachability",
+      "retained references",
+      "memory profiling"
+    ],
+    "follow_up_questions": [
+      "How can a long-lived event listener retain an otherwise unused component?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_034",
+    "topic": "Performance",
+    "subtopic": "Debouncing and Throttling",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What are debouncing and throttling, and when would you use each?",
+    "sample_answer": "Debouncing runs a function after calls stop for a specified interval, which is useful for search input. Throttling limits how often a function runs during repeated events, which is useful for scroll or resize handlers. Both can reduce unnecessary work.",
+    "key_concepts": [
+      "debouncing",
+      "throttling",
+      "event handling",
+      "performance"
+    ],
+    "follow_up_questions": [
+      "What cleanup is needed when a debounced callback belongs to a component that unmounts?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "javascript_035",
+    "topic": "JavaScript Fundamentals",
+    "subtopic": "Deep Copy and Shallow Copy",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between shallow and deep copying, and how would you choose an approach?",
+    "sample_answer": "A shallow copy duplicates the top-level structure but keeps nested object references shared. A deep copy also duplicates nested data. I use spread for simple shallow copies and structuredClone when the data types it supports are appropriate, while considering size and serialization constraints.",
+    "key_concepts": [
+      "shallow copy",
+      "deep copy",
+      "structuredClone",
+      "shared references"
+    ],
+    "follow_up_questions": [
+      "Why can JSON.stringify followed by JSON.parse be unsuitable as a general deep-copy method?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_036",
+    "topic": "JavaScript Modules",
+    "subtopic": "Circular Dependencies",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "What problems can circular dependencies between ES modules cause, and how would you resolve them?",
+    "sample_answer": "Circular dependencies can make initialization order difficult to reason about and may expose bindings before their values are initialized. I would inspect the dependency graph, move shared logic into a lower-level module, and reduce coupling between modules.",
+    "key_concepts": [
+      "ES modules",
+      "circular dependencies",
+      "initialization order",
+      "module design"
+    ],
+    "follow_up_questions": [
+      "Why can a circular import fail even though ES module imports are live bindings?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_037",
+    "topic": "Debugging",
+    "subtopic": "Race Conditions",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "Two asynchronous requests update the same state, and the older response sometimes overwrites the newer one. How would you fix it?",
+    "sample_answer": "I would define which request is allowed to update the state. Common solutions include cancelling stale requests with AbortController, tracking a request identifier, or checking that the response still matches the latest input before applying it.",
+    "key_concepts": [
+      "race conditions",
+      "request ordering",
+      "AbortController",
+      "stale responses"
+    ],
+    "follow_up_questions": [
+      "When is cancellation alone insufficient to guarantee correct state updates?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "javascript_038",
+    "topic": "Asynchronous JavaScript",
+    "subtopic": "Concurrency Control",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you prevent an application from launching thousands of asynchronous requests at once?",
+    "sample_answer": "I would use a bounded-concurrency queue, batch requests where possible, and apply backpressure when downstream services are overloaded. I would also use timeouts, cancellation, and rate limits appropriate to the API.",
+    "key_concepts": [
+      "bounded concurrency",
+      "queue",
+      "backpressure",
+      "batching",
+      "rate limiting"
+    ],
+    "follow_up_questions": [
+      "How would you choose a safe concurrency limit for an external API?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_039",
+    "topic": "Debugging",
+    "subtopic": "Production Performance Investigation",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "A JavaScript application is slow in production, but it works well locally. What steps would you take to identify the cause?",
+    "sample_answer": "I would collect production metrics and traces, compare workload and environment differences, and inspect CPU, memory, network latency, and event-loop delay as relevant. I would reproduce the issue with representative data, profile the bottleneck, make a targeted change, and measure the result.",
+    "key_concepts": [
+      "observability",
+      "profiling",
+      "production diagnostics",
+      "CPU",
+      "memory",
+      "network"
+    ],
+    "follow_up_questions": [
+      "How would you distinguish a slow database call from event-loop blocking in a Node.js service?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "javascript_040",
+    "topic": "Error Handling",
+    "subtopic": "Error Boundaries Between Layers",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer",
+      "Backend Developer"
+    ],
+    "question": "How should errors be handled across service, API, and frontend layers in a full-stack JavaScript application?",
+    "sample_answer": "Each layer should handle errors it can meaningfully resolve and pass unexpected failures to a centralized handler. The API should return consistent status codes and safe messages, while internal logs retain diagnostic context. The frontend should show actionable feedback without exposing sensitive implementation details.",
+    "key_concepts": [
+      "error propagation",
+      "centralized error handling",
+      "HTTP status codes",
+      "safe error messages",
+      "logging"
+    ],
+    "follow_up_questions": [
+      "How would you distinguish validation errors from unexpected server failures?"
+    ],
+    "estimated_time_minutes": 4
+  }
+]

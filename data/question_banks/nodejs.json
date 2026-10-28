@@ -1,0 +1,923 @@
+[
+  {
+    "id": "nodejs_001",
+    "topic": "Node.js Fundamentals",
+    "subtopic": "Node.js Overview",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is Node.js, and why is it used for backend development?",
+    "sample_answer": "Node.js is a JavaScript runtime built on the V8 engine that allows JavaScript to run outside the browser. It is commonly used to build APIs, web servers, and real-time applications.",
+    "key_concepts": [
+      "JavaScript runtime",
+      "V8 engine",
+      "backend development"
+    ],
+    "follow_up_questions": [
+      "How is Node.js different from JavaScript running in a browser?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_002",
+    "topic": "Node.js Fundamentals",
+    "subtopic": "Event-Driven Architecture",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How does Node.js handle multiple requests despite using a main JavaScript thread?",
+    "sample_answer": "Node.js uses an event-driven model and non-blocking I/O. It can delegate many I/O operations to the operating system or libuv's worker pool and process their completion events without blocking the main JavaScript thread.",
+    "key_concepts": [
+      "event-driven architecture",
+      "main thread",
+      "libuv",
+      "non-blocking I/O"
+    ],
+    "follow_up_questions": [
+      "What happens when JavaScript performs a long-running CPU-intensive task?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_003",
+    "topic": "Node.js Fundamentals",
+    "subtopic": "Event Loop",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the Node.js event loop?",
+    "sample_answer": "The event loop coordinates when Node.js executes callbacks for completed asynchronous operations. It allows Node.js to handle I/O efficiently without waiting synchronously for every operation to finish.",
+    "key_concepts": [
+      "event loop",
+      "callbacks",
+      "asynchronous I/O"
+    ],
+    "follow_up_questions": [
+      "How can blocking the event loop affect API response times?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_004",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Synchronous vs Asynchronous",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between synchronous and asynchronous operations in Node.js?",
+    "sample_answer": "Synchronous operations block further JavaScript execution until they finish. Asynchronous operations allow execution to continue while waiting for work such as file or network I/O to complete.",
+    "key_concepts": [
+      "blocking",
+      "non-blocking",
+      "execution flow"
+    ],
+    "follow_up_questions": [
+      "Why should a production API avoid synchronous file operations?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_005",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Callbacks",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is a callback in Node.js?",
+    "sample_answer": "A callback is a function passed to another function to be executed later, often when an asynchronous operation finishes. In Node.js, error-first callbacks commonly receive an error as the first argument.",
+    "key_concepts": [
+      "callback function",
+      "error-first callback",
+      "asynchronous operations"
+    ],
+    "follow_up_questions": [
+      "What problems can callback nesting cause?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_006",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Promises",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is a Promise, and what states can it have?",
+    "sample_answer": "A Promise represents the eventual result of an asynchronous operation. It can be pending, fulfilled, or rejected. The then(), catch(), and finally() methods help handle its result and completion.",
+    "key_concepts": [
+      "Promise",
+      "pending",
+      "fulfilled",
+      "rejected"
+    ],
+    "follow_up_questions": [
+      "How do you handle a rejected Promise?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_007",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Async and Await",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How do async and await simplify asynchronous code?",
+    "sample_answer": "An async function returns a Promise, and await pauses that function's execution until a Promise settles without blocking the main JavaScript thread. try/catch can handle rejected Promises.",
+    "key_concepts": [
+      "async",
+      "await",
+      "Promise",
+      "try/catch"
+    ],
+    "follow_up_questions": [
+      "What happens if an awaited Promise rejects?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_008",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Sequential vs Parallel Execution",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "An API needs data from two independent services. How can you avoid waiting for them sequentially?",
+    "sample_answer": "Start both requests and await them together with Promise.all(). This allows independent operations to run concurrently. Promise.all() rejects if any input Promise rejects.",
+    "key_concepts": [
+      "Promise.all",
+      "concurrency",
+      "independent operations"
+    ],
+    "follow_up_questions": [
+      "When might Promise.allSettled() be more appropriate?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_009",
+    "topic": "Modules and Packages",
+    "subtopic": "CommonJS vs ES Modules",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between CommonJS and ES modules in Node.js?",
+    "sample_answer": "CommonJS typically uses require() and module.exports, while ES modules use import and export. Node.js supports both, with module interpretation determined by file extensions and package configuration.",
+    "key_concepts": [
+      "require",
+      "module.exports",
+      "import",
+      "export",
+      "module configuration"
+    ],
+    "follow_up_questions": [
+      "How can package.json configure a project to use ES modules?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_010",
+    "topic": "Modules and Packages",
+    "subtopic": "npm and package.json",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What are npm, package.json, and package-lock.json?",
+    "sample_answer": "npm is a package manager for installing and managing dependencies. package.json defines project metadata, scripts, and dependency ranges. package-lock.json records the resolved dependency tree so installations can be reproduced more consistently.",
+    "key_concepts": [
+      "npm",
+      "package.json",
+      "package-lock.json",
+      "dependencies"
+    ],
+    "follow_up_questions": [
+      "Why should package-lock.json usually be committed to version control?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_011",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "Express Overview",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is Express.js, and how does it help build a Node.js backend?",
+    "sample_answer": "Express.js is a web framework for Node.js. It simplifies handling HTTP requests and responses through routing, middleware, and error-handling mechanisms.",
+    "key_concepts": [
+      "Express.js",
+      "HTTP requests",
+      "routing",
+      "middleware"
+    ],
+    "follow_up_questions": [
+      "What is the purpose of app.listen()?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_012",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "Routing",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How does routing work in Express.js?",
+    "sample_answer": "Routing maps an HTTP method and URL path to a handler. For example, app.get('/products', handler) handles matching GET requests. Express Router helps organize routes into separate modules.",
+    "key_concepts": [
+      "HTTP methods",
+      "route paths",
+      "route handlers",
+      "Express Router"
+    ],
+    "follow_up_questions": [
+      "How would you organize routes for users and products in a growing application?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_013",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "Middleware",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is middleware in Express.js, and why does its order matter?",
+    "sample_answer": "Middleware is a function that can inspect or modify the request and response, end the response, or pass control onward with next(). Its order matters because middleware runs in registration order and can affect whether later handlers execute.",
+    "key_concepts": [
+      "middleware",
+      "next()",
+      "execution order",
+      "request processing"
+    ],
+    "follow_up_questions": [
+      "What happens if middleware neither sends a response nor calls next()?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_014",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "Request and Response Lifecycle",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "Explain the lifecycle of a request in an Express application.",
+    "sample_answer": "A request reaches the Node.js server, matches Express middleware and routes in order, and is handled by a route handler. The application sends a response or passes an error to error-handling middleware. If no route matches, the application should return an appropriate not-found response.",
+    "key_concepts": [
+      "HTTP request",
+      "middleware chain",
+      "route handler",
+      "response",
+      "error handling"
+    ],
+    "follow_up_questions": [
+      "How would you handle a URL that does not match any route?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_015",
+    "topic": "Error Handling",
+    "subtopic": "Centralized Error Handling",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How do you handle errors centrally in Express.js?",
+    "sample_answer": "Define error-handling middleware with four parameters: (err, req, res, next). Pass errors to it with next(err), return appropriate HTTP status codes, and avoid exposing stack traces or sensitive details to clients in production.",
+    "key_concepts": [
+      "error middleware",
+      "next(err)",
+      "HTTP status codes",
+      "safe error responses"
+    ],
+    "follow_up_questions": [
+      "How does error-handling middleware differ from regular middleware?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_016",
+    "topic": "Configuration and Validation",
+    "subtopic": "Environment Variables",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How do you manage environment-specific configuration in Node.js?",
+    "sample_answer": "Use environment variables for settings such as ports and external service URLs. A package like dotenv can load values from a local .env file during development. Validate required configuration at startup and never commit secrets to source control.",
+    "key_concepts": [
+      "process.env",
+      "dotenv",
+      "configuration",
+      "secret management"
+    ],
+    "follow_up_questions": [
+      "Why should environment variables be validated when the application starts?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_017",
+    "topic": "Configuration and Validation",
+    "subtopic": "Input Validation",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you validate request data before processing it in an Express route?",
+    "sample_answer": "Validate request parameters, query values, and body fields against an explicit schema using a library such as Zod, Joi, or express-validator. Reject invalid input with a suitable 4xx response and never rely on client-side validation alone.",
+    "key_concepts": [
+      "schema validation",
+      "request body",
+      "query parameters",
+      "4xx responses"
+    ],
+    "follow_up_questions": [
+      "What is the difference between validation and sanitization?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_018",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Express Async Errors",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How should an Express route handle a failing asynchronous operation?",
+    "sample_answer": "Use try/catch around awaited operations and pass the error to next(err), or use a compatible async error-handling approach. Express 5 automatically forwards rejected Promises returned by route handlers and middleware to error handling; Express 4 commonly needs explicit forwarding or a wrapper.",
+    "key_concepts": [
+      "async/await",
+      "try/catch",
+      "next(err)",
+      "Express 4",
+      "Express 5"
+    ],
+    "follow_up_questions": [
+      "Why can an unhandled rejected Promise cause problems in a backend service?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_019",
+    "topic": "Node.js Fundamentals",
+    "subtopic": "CPU-Bound Work",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What happens if a route performs a long synchronous calculation?",
+    "sample_answer": "The calculation blocks the main JavaScript thread and delays other callbacks and incoming request processing. For expensive CPU-bound work, consider worker threads, a separate worker service, or a job queue.",
+    "key_concepts": [
+      "event-loop blocking",
+      "CPU-bound work",
+      "worker threads",
+      "job queues"
+    ],
+    "follow_up_questions": [
+      "How is CPU-bound work different from waiting for a network response?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_020",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "HTTP Response Handling",
+    "difficulty": "easy",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between res.send(), res.json(), and res.status()?",
+    "sample_answer": "res.send() sends a response, res.json() serializes a value as JSON, and res.status() sets the HTTP status code and returns the response object for chaining. For example, res.status(201).json({ id: 1 }) sends JSON with status 201.",
+    "key_concepts": [
+      "res.send()",
+      "res.json()",
+      "res.status()",
+      "HTTP status"
+    ],
+    "follow_up_questions": [
+      "What can happen if a route attempts to send two responses for one request?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_021",
+    "topic": "Express.js Fundamentals",
+    "subtopic": "Middleware Types",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between application-level, router-level, and error-handling middleware?",
+    "sample_answer": "Application-level middleware is registered on the Express app, router-level middleware is attached to an Express Router, and error-handling middleware receives errors through its four-parameter signature. They help separate cross-cutting behavior, route-specific behavior, and error processing.",
+    "key_concepts": [
+      "app.use()",
+      "Router",
+      "error middleware",
+      "middleware scope"
+    ],
+    "follow_up_questions": [
+      "Where would you register request logging middleware?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_022",
+    "topic": "Asynchronous Programming",
+    "subtopic": "Promise Error Handling",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between handling errors with catch() and try/catch?",
+    "sample_answer": "catch() handles a rejected Promise in a Promise chain. try/catch handles synchronous exceptions in its block and, when used with await, can catch a rejected Promise from the awaited operation.",
+    "key_concepts": [
+      "Promise.catch()",
+      "try/catch",
+      "rejected Promises",
+      "async/await"
+    ],
+    "follow_up_questions": [
+      "Does a try/catch catch a rejection from a Promise that is not awaited or returned?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "nodejs_023",
+    "topic": "Backend Performance",
+    "subtopic": "High Request Volume",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "Your Express API receives a sudden tenfold increase in traffic. How would you keep it responsive?",
+    "sample_answer": "Measure latency, throughput, error rates, and resource usage first. Check for blocking work and slow dependencies, apply suitable timeouts and rate limits, cache safe repeated reads, and scale horizontally behind a load balancer when needed. Validate improvements with load tests.",
+    "key_concepts": [
+      "load testing",
+      "observability",
+      "rate limiting",
+      "caching",
+      "horizontal scaling"
+    ],
+    "follow_up_questions": [
+      "Which metrics would you monitor to distinguish application saturation from a slow downstream service?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_024",
+    "topic": "Backend Performance",
+    "subtopic": "Event Loop Bottlenecks",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "Users report intermittent latency spikes even though average CPU usage is low. How would you investigate the Node.js service?",
+    "sample_answer": "Inspect latency percentiles, event-loop delay, garbage-collection activity, and downstream dependency timings. Use Node.js performance hooks, profiling, and diagnostic reports to identify blocking callbacks or other stalls, then reproduce the issue under representative load.",
+    "key_concepts": [
+      "latency percentiles",
+      "event-loop delay",
+      "profiling",
+      "garbage collection",
+      "diagnostic reports"
+    ],
+    "follow_up_questions": [
+      "How would event-loop delay differ from a slow database query in your metrics?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_025",
+    "topic": "Concurrency and Scalability",
+    "subtopic": "Node.js Concurrency",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you handle CPU-intensive work without making ordinary API requests unresponsive?",
+    "sample_answer": "Move CPU-heavy tasks to worker threads, child processes, or a separate worker service. For longer jobs, use a queue and return a job identifier rather than blocking the request. Choose bounded concurrency and monitor worker saturation.",
+    "key_concepts": [
+      "worker threads",
+      "child processes",
+      "job queues",
+      "bounded concurrency"
+    ],
+    "follow_up_questions": [
+      "When would you choose worker threads instead of a separate service?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_026",
+    "topic": "Concurrency and Scalability",
+    "subtopic": "Shared State Across Instances",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "An API runs on several Node.js instances behind a load balancer. Why can in-memory session or rate-limit state become inconsistent?",
+    "sample_answer": "Each process has its own memory, so a request reaching another instance may see different state. Use a shared store or a distributed coordination mechanism when state must be consistent across instances. Sticky sessions alone do not solve every reliability problem.",
+    "key_concepts": [
+      "process isolation",
+      "horizontal scaling",
+      "shared state",
+      "distributed coordination"
+    ],
+    "follow_up_questions": [
+      "What trade-offs would you consider when choosing a shared store?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_027",
+    "topic": "Backend Reliability",
+    "subtopic": "Graceful Shutdown",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you implement graceful shutdown for an Express service during deployment?",
+    "sample_answer": "Listen for termination signals such as SIGTERM, stop accepting new connections, allow in-flight requests to finish within a deadline, and close resources such as database pools and message consumers. Force termination after a bounded timeout if shutdown cannot complete.",
+    "key_concepts": [
+      "SIGTERM",
+      "server.close()",
+      "in-flight requests",
+      "resource cleanup",
+      "shutdown deadline"
+    ],
+    "follow_up_questions": [
+      "What should happen if a request remains in progress beyond the shutdown deadline?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_028",
+    "topic": "Backend Reliability",
+    "subtopic": "Unhandled Errors",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How should a production Node.js service respond to an uncaught exception or an unhandled Promise rejection?",
+    "sample_answer": "Prevent these failures with explicit error handling and monitoring. If an uncaught exception leaves the process in an unknown state, record diagnostic information safely, perform only bounded cleanup where feasible, and let a process supervisor restart it. Do not assume the application can safely continue.",
+    "key_concepts": [
+      "uncaughtException",
+      "unhandledRejection",
+      "process supervision",
+      "crash recovery"
+    ],
+    "follow_up_questions": [
+      "Why is restarting a process safer than continuing after certain uncaught exceptions?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_029",
+    "topic": "Logging and Observability",
+    "subtopic": "Structured Logging",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you design logging for an Express API serving multiple customers and services?",
+    "sample_answer": "Use structured logs with fields such as timestamp, severity, request or trace ID, route, duration, and error category. Centralize log collection, redact secrets and sensitive data, and use consistent correlation IDs to trace requests across services.",
+    "key_concepts": [
+      "structured logging",
+      "correlation IDs",
+      "traceability",
+      "redaction",
+      "centralized logs"
+    ],
+    "follow_up_questions": [
+      "How would you trace one failed request across several backend services?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_030",
+    "topic": "Debugging and Monitoring",
+    "subtopic": "Production Debugging",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "A production endpoint sometimes returns 500 errors, but you cannot reproduce the issue locally. What steps would you take?",
+    "sample_answer": "Inspect structured logs, error traces, request IDs, deployment changes, and dependency health. Compare failing and successful requests, reproduce with safe representative inputs, and use metrics or tracing to isolate the failing layer. Add a regression test after fixing the root cause.",
+    "key_concepts": [
+      "production debugging",
+      "logs",
+      "distributed tracing",
+      "regression tests",
+      "root-cause analysis"
+    ],
+    "follow_up_questions": [
+      "What would you do if the logs do not contain enough information to identify the cause?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_031",
+    "topic": "Backend Reliability",
+    "subtopic": "Timeouts and Retries",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "An Express route calls an unreliable external service. How would you prevent that dependency from exhausting your application's resources?",
+    "sample_answer": "Set explicit request timeouts, bound concurrent calls, and use retries only for suitable transient failures with backoff and jitter. Limit retries, avoid retrying non-idempotent operations without safeguards, and consider circuit breakers or graceful degradation when the dependency remains unhealthy.",
+    "key_concepts": [
+      "timeouts",
+      "bounded concurrency",
+      "backoff",
+      "jitter",
+      "circuit breaker",
+      "idempotency"
+    ],
+    "follow_up_questions": [
+      "How can aggressive retries make an outage worse?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_032",
+    "topic": "Backend Performance",
+    "subtopic": "Memory Leaks",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "A Node.js service's memory usage steadily increases until it restarts. How would you investigate and fix it?",
+    "sample_answer": "Track heap usage and garbage-collection behavior over time, reproduce the workload, and compare heap snapshots to find objects that remain reachable unexpectedly. Check unbounded caches, retained request objects, listeners, and timers. Fix the retention issue and verify the result under sustained load.",
+    "key_concepts": [
+      "heap snapshots",
+      "garbage collection",
+      "memory leaks",
+      "unbounded caches",
+      "retained references"
+    ],
+    "follow_up_questions": [
+      "How can you distinguish a memory leak from normal memory growth under load?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_033",
+    "topic": "Express.js Architecture",
+    "subtopic": "Middleware Design",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you organize middleware in a large Express application so that errors and request processing remain predictable?",
+    "sample_answer": "Separate cross-cutting middleware, route-specific middleware, route handlers, and centralized error handling. Register parsing and request-context middleware before routes, put not-found handling after routes, and place error middleware last. Keep middleware focused and document its ordering requirements.",
+    "key_concepts": [
+      "middleware ordering",
+      "separation of concerns",
+      "not-found handler",
+      "centralized errors"
+    ],
+    "follow_up_questions": [
+      "How would you prevent a middleware from accidentally sending a response twice?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_034",
+    "topic": "Configuration and Validation",
+    "subtopic": "Configuration Reliability",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "Your service starts successfully but fails when a specific feature is used because a configuration value is missing. How would you prevent this?",
+    "sample_answer": "Validate required environment variables and configuration types during startup, apply explicit defaults only where safe, and fail fast with clear non-secret error messages. Keep development, testing, and production configuration separate and avoid hardcoding credentials.",
+    "key_concepts": [
+      "startup validation",
+      "fail fast",
+      "configuration schema",
+      "environment separation",
+      "secret handling"
+    ],
+    "follow_up_questions": [
+      "Which configuration values should have defaults, and which should cause startup to fail when missing?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_035",
+    "topic": "Backend Performance",
+    "subtopic": "Request Resource Limits",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "How would you protect an Express API from clients sending extremely large request bodies or too many expensive requests?",
+    "sample_answer": "Set appropriate request-body size limits, validate input, apply rate limits where suitable, and bound expensive work and concurrent operations. Configure timeouts and reverse-proxy limits as well, and return clear client errors when limits are exceeded.",
+    "key_concepts": [
+      "body-size limits",
+      "rate limiting",
+      "timeouts",
+      "bounded concurrency",
+      "resource protection"
+    ],
+    "follow_up_questions": [
+      "How would you choose limits without blocking legitimate large uploads or batch operations?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_036",
+    "topic": "Backend Reliability",
+    "subtopic": "Health Checks",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "What is the difference between liveness and readiness checks for a Node.js service?",
+    "sample_answer": "A liveness check indicates whether the process is functioning and may need restarting if it fails. A readiness check indicates whether the instance can accept traffic, considering required initialization and dependencies. They should reflect different operational decisions.",
+    "key_concepts": [
+      "liveness",
+      "readiness",
+      "orchestration",
+      "dependency health"
+    ],
+    "follow_up_questions": [
+      "Why can making liveness depend on every downstream service cause restart loops?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "nodejs_037",
+    "topic": "Concurrency and Scalability",
+    "subtopic": "Worker Pool Saturation",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "Several requests perform expensive file-system or cryptographic operations, and unrelated I/O starts slowing down. What could be happening?",
+    "sample_answer": "Operations that use libuv's worker pool may be saturating its limited threads, causing other worker-pool tasks to wait. Profile the workload, limit concurrency, move suitable CPU-heavy work to dedicated workers, and adjust pool settings only after measuring the impact.",
+    "key_concepts": [
+      "libuv worker pool",
+      "thread-pool saturation",
+      "concurrency limits",
+      "profiling"
+    ],
+    "follow_up_questions": [
+      "Why does increasing the worker-pool size not automatically solve every performance problem?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "nodejs_038",
+    "topic": "Backend Reliability",
+    "subtopic": "Request Cancellation",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer"
+    ],
+    "question": "A client disconnects while an Express route is waiting for a slow downstream operation. How would you avoid wasting resources on work that is no longer needed?",
+    "sample_answer": "Where supported, propagate cancellation using AbortController or the downstream client's cancellation mechanism when the request is aborted or the connection closes. Clean up listeners and resources, and distinguish a client disconnect from an application error. Do not cancel shared work that other requests still need.",
+    "key_concepts": [
+      "request cancellation",
+      "AbortController",
+      "resource cleanup",
+      "client disconnect",
+      "shared work"
+    ],
+    "follow_up_questions": [
+      "What risks arise if cancellation is propagated to work shared by multiple requests?"
+    ],
+    "estimated_time_minutes": 4
+  }
+]

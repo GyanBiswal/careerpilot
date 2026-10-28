@@ -27,8 +27,11 @@ class Settings(BaseSettings):
     # LLM (Groq). The key is optional so the app still starts without it;
     # AI endpoints return 503 until it is configured.
     groq_api_key: str | None = None
-    groq_model: str = "openai/gpt-oss-120b"
+    groq_model: str = "openai/gpt-oss-20b"
     llm_timeout_seconds: int = 60
+
+    # Question banks: relative paths are resolved from the project root.
+    question_bank_dir: str = "data/question_banks"
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 

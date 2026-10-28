@@ -1,0 +1,979 @@
+[
+  {
+    "id": "backend_api_001",
+    "topic": "Client-Server Architecture",
+    "subtopic": "Request-Response Model",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is client-server architecture, and how does a REST API fit into it?",
+    "sample_answer": "The client sends requests to a server, and the server processes them and returns responses. A REST API defines how clients access and manipulate server resources over HTTP.",
+    "key_concepts": [
+      "client",
+      "server",
+      "HTTP",
+      "REST API"
+    ],
+    "follow_up_questions": [
+      "How does a frontend application communicate with a backend?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "backend_api_002",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "HTTP Methods",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are the differences between GET, POST, PUT, PATCH, and DELETE?",
+    "sample_answer": "GET retrieves a resource, POST commonly creates a resource or triggers processing, PUT replaces a resource representation, PATCH partially updates it, and DELETE removes it. The API contract defines the precise behavior.",
+    "key_concepts": [
+      "HTTP methods",
+      "resource operations",
+      "PUT",
+      "PATCH"
+    ],
+    "follow_up_questions": [
+      "Which of these methods are generally considered idempotent?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_003",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "HTTP Status Codes",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Which HTTP status codes should an API return for successful requests, client errors, and server errors?",
+    "sample_answer": "2xx indicates success, 4xx indicates a client-side request problem, and 5xx indicates a server-side failure. Common examples include 200 OK, 201 Created, 204 No Content, 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found, 409 Conflict, 422 Unprocessable Content, and 500 Internal Server Error.",
+    "key_concepts": [
+      "2xx",
+      "4xx",
+      "5xx",
+      "201",
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "follow_up_questions": [
+      "When would you return 201 instead of 200?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_004",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "Headers and JSON",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are HTTP headers, and what is the purpose of Content-Type and Accept?",
+    "sample_answer": "HTTP headers carry metadata about a request or response. Content-Type identifies the format of the message body, while Accept tells the server which response formats the client can handle. For JSON, Content-Type is commonly application/json.",
+    "key_concepts": [
+      "HTTP headers",
+      "Content-Type",
+      "Accept",
+      "JSON"
+    ],
+    "follow_up_questions": [
+      "What might happen if the server receives JSON but does not recognize the request's Content-Type?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "backend_api_005",
+    "topic": "REST API Design",
+    "subtopic": "REST Principles",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is REST, and what are its main principles?",
+    "sample_answer": "REST is an architectural style for networked applications. Its constraints include client-server separation, stateless requests, cacheability, a uniform interface, layered architecture, and optional code-on-demand. APIs commonly expose resources through URLs and use HTTP methods to operate on them.",
+    "key_concepts": [
+      "REST",
+      "statelessness",
+      "resources",
+      "uniform interface",
+      "cacheability"
+    ],
+    "follow_up_questions": [
+      "What does statelessness mean in a REST API?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_006",
+    "topic": "REST API Design",
+    "subtopic": "Resource Naming",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How would you design clear and consistent REST API endpoints for managing products?",
+    "sample_answer": "Use resource-oriented paths such as GET /products, GET /products/123, POST /products, PATCH /products/123, and DELETE /products/123. Use nouns for resources, consistent naming, appropriate HTTP methods, and predictable response formats.",
+    "key_concepts": [
+      "resource-oriented URLs",
+      "HTTP methods",
+      "consistent naming",
+      "API conventions"
+    ],
+    "follow_up_questions": [
+      "Why is /getProducts generally less RESTful than /products with GET?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_007",
+    "topic": "REST API Design",
+    "subtopic": "Request Validation",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How should an API handle invalid request data?",
+    "sample_answer": "Validate required fields, data types, formats, and business constraints before processing the request. Return an appropriate 4xx status with a consistent error structure that explains the invalid fields without exposing internal implementation details.",
+    "key_concepts": [
+      "input validation",
+      "business rules",
+      "4xx responses",
+      "consistent errors"
+    ],
+    "follow_up_questions": [
+      "What is the difference between syntactically invalid input and a business-rule violation?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_008",
+    "topic": "REST API Design",
+    "subtopic": "Error Response Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What information should a well-designed API error response contain?",
+    "sample_answer": "It should contain a suitable HTTP status and a consistent body with a machine-readable error code and a clear message. Validation errors can include field-level details. Avoid returning stack traces, secrets, or sensitive internal data.",
+    "key_concepts": [
+      "error schema",
+      "machine-readable codes",
+      "validation details",
+      "information disclosure"
+    ],
+    "follow_up_questions": [
+      "Why should frontend applications not depend only on the exact wording of an error message?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_009",
+    "topic": "REST API Design",
+    "subtopic": "Pagination",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Why should APIs paginate large collections, and what are common pagination approaches?",
+    "sample_answer": "Pagination limits the amount of data returned per request, reducing response size and processing costs. Common approaches are offset pagination using limit and offset, and cursor pagination using a continuation token or last-seen position.",
+    "key_concepts": [
+      "pagination",
+      "limit",
+      "offset",
+      "cursor"
+    ],
+    "follow_up_questions": [
+      "Why can cursor pagination work better for frequently changing large datasets?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_010",
+    "topic": "REST API Design",
+    "subtopic": "Filtering and Sorting",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How would you support filtering and sorting in a products API?",
+    "sample_answer": "Use documented query parameters, such as /products?category=books&sortBy=price&order=asc. Validate allowed filter and sort fields, define defaults, and avoid accepting arbitrary query expressions from clients.",
+    "key_concepts": [
+      "query parameters",
+      "filtering",
+      "sorting",
+      "input validation"
+    ],
+    "follow_up_questions": [
+      "Why should the API restrict which fields clients can sort by?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "backend_api_011",
+    "topic": "API Security",
+    "subtopic": "Authentication vs Authorization",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is the difference between authentication and authorization?",
+    "sample_answer": "Authentication verifies who the user or client is. Authorization determines what that identity is allowed to access or do. A valid login does not automatically grant access to every resource.",
+    "key_concepts": [
+      "authentication",
+      "authorization",
+      "identity",
+      "permissions"
+    ],
+    "follow_up_questions": [
+      "How should an API respond when a logged-in user lacks permission to access a resource?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "backend_api_012",
+    "topic": "API Security",
+    "subtopic": "Sessions vs JWT",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is the difference between session-based authentication and JWT-based authentication?",
+    "sample_answer": "Session-based authentication typically stores session state on the server and sends a session identifier to the client. JWT-based authentication uses a signed token containing claims that a server validates. JWTs can reduce the need for per-request session lookups but require careful expiry, storage, and revocation strategies.",
+    "key_concepts": [
+      "sessions",
+      "JWT",
+      "server-side state",
+      "token expiry",
+      "revocation"
+    ],
+    "follow_up_questions": [
+      "Why can revoking a JWT before it expires be more complicated than invalidating a server-side session?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_013",
+    "topic": "API Security",
+    "subtopic": "Password Security",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How should an application securely store user passwords?",
+    "sample_answer": "Store password hashes produced by a dedicated password-hashing algorithm such as Argon2id, bcrypt, or scrypt, using an appropriate work factor. Use unique salts as supported by the algorithm, never store plaintext passwords, and never log passwords.",
+    "key_concepts": [
+      "password hashing",
+      "Argon2id",
+      "bcrypt",
+      "salts",
+      "credential security"
+    ],
+    "follow_up_questions": [
+      "Why is a fast general-purpose hash such as plain SHA-256 unsuitable for password storage?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_014",
+    "topic": "API Security",
+    "subtopic": "CORS",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is CORS, and why might a frontend application receive a CORS error?",
+    "sample_answer": "Cross-Origin Resource Sharing is a browser-enforced mechanism that controls whether a web page can read responses from a different origin. The server must return appropriate CORS headers for permitted origins and requests. CORS is not a substitute for authentication or authorization.",
+    "key_concepts": [
+      "CORS",
+      "origin",
+      "browser security",
+      "CORS headers"
+    ],
+    "follow_up_questions": [
+      "Why is allowing every origin with credentials unsafe or invalid under standard browser CORS rules?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_015",
+    "topic": "API Security",
+    "subtopic": "Rate Limiting",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is API rate limiting, and why is it important?",
+    "sample_answer": "Rate limiting restricts how many requests a client can make within a defined period. It helps protect availability, reduce abuse, and control resource consumption. APIs commonly communicate limit violations with HTTP 429 Too Many Requests.",
+    "key_concepts": [
+      "rate limiting",
+      "HTTP 429",
+      "abuse prevention",
+      "resource protection"
+    ],
+    "follow_up_questions": [
+      "How might rate limiting differ for login requests and public read-only endpoints?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_016",
+    "topic": "REST API Design",
+    "subtopic": "Idempotency",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What does idempotency mean in HTTP APIs, and why does it matter?",
+    "sample_answer": "An operation is idempotent when repeating the same request has the same intended effect as making it once. GET, PUT, and DELETE are defined as idempotent methods, although repeated responses may differ. Idempotency is important when clients retry requests after network failures.",
+    "key_concepts": [
+      "idempotency",
+      "HTTP methods",
+      "retries",
+      "duplicate operations"
+    ],
+    "follow_up_questions": [
+      "Why is POST not inherently idempotent, and how can an API support safe retries for a payment request?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_017",
+    "topic": "REST API Design",
+    "subtopic": "API Versioning",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Why do APIs need versioning, and what is one common versioning strategy?",
+    "sample_answer": "Versioning lets an API evolve while existing clients continue using a compatible contract. A common strategy places the version in the URL, such as /api/v1/products. Teams should communicate breaking changes and provide a migration or deprecation plan.",
+    "key_concepts": [
+      "API versioning",
+      "backward compatibility",
+      "breaking changes",
+      "deprecation"
+    ],
+    "follow_up_questions": [
+      "Which kinds of API changes can break existing clients?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_018",
+    "topic": "API Security",
+    "subtopic": "Secure API Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are some essential security practices when designing a public API?",
+    "sample_answer": "Use HTTPS, validate inputs, enforce authentication and authorization where needed, apply rate limits, restrict exposed data, manage secrets securely, and return safe error responses. Also use appropriate security headers and monitor suspicious activity.",
+    "key_concepts": [
+      "HTTPS",
+      "input validation",
+      "access control",
+      "rate limiting",
+      "secret management"
+    ],
+    "follow_up_questions": [
+      "Why must authorization be checked on the server even if the frontend hides restricted actions?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_019",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "PUT vs PATCH",
+    "difficulty": "easy",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "When would you use PUT instead of PATCH to update a resource?",
+    "sample_answer": "PUT generally replaces the target resource representation, while PATCH applies partial modifications. The exact update semantics should be documented in the API contract, including how omitted fields are handled.",
+    "key_concepts": [
+      "PUT",
+      "PATCH",
+      "replacement",
+      "partial update"
+    ],
+    "follow_up_questions": [
+      "What should an API do with fields omitted from a PUT request?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "backend_api_020",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "Safe and Idempotent Methods",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is the difference between a safe HTTP method and an idempotent HTTP method?",
+    "sample_answer": "A safe method is intended not to change server state, as with GET. An idempotent method has the same intended effect when repeated. GET is both safe and idempotent; PUT and DELETE are idempotent but are not safe.",
+    "key_concepts": [
+      "safe methods",
+      "idempotency",
+      "GET",
+      "PUT",
+      "DELETE"
+    ],
+    "follow_up_questions": [
+      "Why should a GET endpoint avoid performing business-changing actions?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_021",
+    "topic": "HTTP Fundamentals",
+    "subtopic": "Caching Headers",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What do Cache-Control and ETag do in an HTTP API?",
+    "sample_answer": "Cache-Control defines caching policies such as freshness and whether responses may be stored. ETag provides a validator for a representation, allowing conditional requests such as If-None-Match and potentially a 304 Not Modified response when the representation has not changed.",
+    "key_concepts": [
+      "Cache-Control",
+      "ETag",
+      "conditional requests",
+      "304 Not Modified"
+    ],
+    "follow_up_questions": [
+      "Why should personalized or sensitive responses have carefully chosen cache policies?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_022",
+    "topic": "API Security",
+    "subtopic": "JWT Validation",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What should a server check when validating a JWT?",
+    "sample_answer": "Verify the token's signature using an explicitly allowed algorithm and trusted key, and validate relevant claims such as issuer, audience, and expiry. Do not trust decoded claims until validation succeeds, and avoid putting sensitive secrets in a token payload.",
+    "key_concepts": [
+      "JWT signature",
+      "algorithm validation",
+      "issuer",
+      "audience",
+      "expiry"
+    ],
+    "follow_up_questions": [
+      "Why is decoding a JWT different from verifying it?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_023",
+    "topic": "API Scalability",
+    "subtopic": "High Traffic Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API's traffic increases tenfold, and response times become much slower. How would you investigate and scale it?",
+    "sample_answer": "Inspect latency percentiles, throughput, error rates, resource utilization, and dependency timings. Use load tests and tracing to find bottlenecks, then apply appropriate caching, pagination, concurrency limits, or horizontal scaling. Re-measure after each change to verify the improvement.",
+    "key_concepts": [
+      "latency percentiles",
+      "throughput",
+      "load testing",
+      "bottleneck analysis",
+      "horizontal scaling"
+    ],
+    "follow_up_questions": [
+      "How would you distinguish an application bottleneck from a saturated downstream service?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_024",
+    "topic": "Caching Strategy",
+    "subtopic": "Cache Invalidation",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A product catalog API is read frequently but updated occasionally. How would you introduce caching without serving stale data indefinitely?",
+    "sample_answer": "Choose a suitable cache location and freshness policy, such as a bounded TTL, and invalidate or update affected entries after successful changes. Consider ETags for client revalidation and cache stampedes during expiry. Define acceptable staleness and ensure cached data respects authorization boundaries.",
+    "key_concepts": [
+      "TTL",
+      "invalidation",
+      "ETag",
+      "cache stampede",
+      "data freshness"
+    ],
+    "follow_up_questions": [
+      "What trade-offs exist between TTL-based expiry and event-driven invalidation?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_025",
+    "topic": "API Scalability",
+    "subtopic": "Stateless Services",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Why does stateless API design help with horizontal scaling, and what state may still need to be shared?",
+    "sample_answer": "When each request carries the information needed to process it, any healthy instance can handle the request more easily. Shared state such as sessions, rate-limit counters, and idempotency records may still require a central or distributed store. Statelessness does not mean the entire system has no state.",
+    "key_concepts": [
+      "statelessness",
+      "horizontal scaling",
+      "shared state",
+      "distributed services"
+    ],
+    "follow_up_questions": [
+      "What problems can arise when each API instance keeps its own rate-limit counters?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_026",
+    "topic": "API Compatibility",
+    "subtopic": "Backward-Compatible Changes",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "You need to change an API response used by web and mobile clients, including older app versions. How would you avoid breaking existing consumers?",
+    "sample_answer": "Prefer additive, optional changes that preserve existing fields and meanings. Identify consumers, publish the contract, test compatibility, and deprecate old behavior through a communicated migration period. Introduce a new version when a breaking change cannot be avoided.",
+    "key_concepts": [
+      "backward compatibility",
+      "API contracts",
+      "consumer compatibility",
+      "deprecation",
+      "versioning"
+    ],
+    "follow_up_questions": [
+      "Why can changing the meaning or type of an existing field be breaking even if the field name stays the same?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_027",
+    "topic": "API Reliability",
+    "subtopic": "Timeouts and Retries",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API calls a slow external service, and clients sometimes retry requests. How would you design timeout and retry behavior safely?",
+    "sample_answer": "Set explicit connection and overall request deadlines, propagate remaining time where possible, and retry only suitable transient failures with bounded exponential backoff and jitter. Ensure operations are idempotent or protected against duplicate effects before retrying. Avoid retries that amplify an outage.",
+    "key_concepts": [
+      "timeouts",
+      "retry budget",
+      "exponential backoff",
+      "jitter",
+      "idempotency"
+    ],
+    "follow_up_questions": [
+      "Why can retrying a payment request after a timeout create a duplicate charge?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_028",
+    "topic": "API Security",
+    "subtopic": "Distributed Rate Limiting",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Your API runs on multiple instances. How would you enforce a rate limit consistently across all instances?",
+    "sample_answer": "Use a shared rate-limit store or gateway-level enforcement with an algorithm such as token bucket or sliding window. Define the limit key, time window, burst behavior, and failure policy. Return 429 responses with useful retry information when appropriate, and protect the shared limiter from becoming a bottleneck.",
+    "key_concepts": [
+      "distributed rate limiting",
+      "token bucket",
+      "sliding window",
+      "shared store",
+      "HTTP 429"
+    ],
+    "follow_up_questions": [
+      "How would you choose between a fixed window and a token bucket?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_029",
+    "topic": "API Observability",
+    "subtopic": "API Metrics",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Which metrics and logs would you monitor to determine whether a production API is healthy?",
+    "sample_answer": "Track request rate, latency percentiles, error rate, saturation, and dependency performance. Use structured logs with request or trace IDs, plus distributed traces to follow requests across services. Monitor trends and alert on meaningful service-level objectives rather than a single metric.",
+    "key_concepts": [
+      "request rate",
+      "latency percentiles",
+      "error rate",
+      "saturation",
+      "distributed tracing",
+      "SLOs"
+    ],
+    "follow_up_questions": [
+      "Why are p95 and p99 latency often more useful than average latency?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_030",
+    "topic": "Production Troubleshooting",
+    "subtopic": "Elevated Error Rates",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "After a deployment, an API's 5xx error rate suddenly increases. How would you diagnose and respond?",
+    "sample_answer": "Check deployment timing, error trends by endpoint, logs, traces, and dependency health. Compare the new release with the previous version and assess user impact. If the release is responsible, roll back or disable the affected feature when safe, then reproduce the failure and add regression coverage.",
+    "key_concepts": [
+      "incident response",
+      "deployment correlation",
+      "logs",
+      "tracing",
+      "rollback",
+      "regression tests"
+    ],
+    "follow_up_questions": [
+      "What evidence would help distinguish a bad deployment from a simultaneous dependency outage?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_031",
+    "topic": "API Reliability",
+    "subtopic": "Idempotency Keys",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A payment client times out after submitting a payment and retries the same request. How would you prevent duplicate processing?",
+    "sample_answer": "Support an idempotency key generated by the client for the logical operation. Record the key and operation outcome atomically, scope it appropriately, and return the original result for valid duplicate requests. Define key expiry and behavior when the same key is reused with a different payload.",
+    "key_concepts": [
+      "idempotency keys",
+      "duplicate prevention",
+      "atomicity",
+      "request fingerprint",
+      "retries"
+    ],
+    "follow_up_questions": [
+      "What should the API do if the same idempotency key arrives with a different request body?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_032",
+    "topic": "API Security",
+    "subtopic": "Object-Level Authorization",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A user changes an order ID in an API URL and can view another user's order. What vulnerability is this, and how would you fix it?",
+    "sample_answer": "This is a broken object-level authorization vulnerability. The API must verify that the authenticated user is permitted to access the specific order for every relevant operation. Knowing or guessing an identifier must not grant access.",
+    "key_concepts": [
+      "object-level authorization",
+      "access control",
+      "IDOR",
+      "least privilege"
+    ],
+    "follow_up_questions": [
+      "Why is using unpredictable IDs alone not a sufficient fix?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "backend_api_033",
+    "topic": "API Scalability",
+    "subtopic": "Pagination Under Change",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A client paginates through a rapidly changing collection and sees duplicated or missing items. How would you improve the API contract?",
+    "sample_answer": "Use stable ordering with a unique tie-breaker and consider cursor-based pagination instead of large offsets. Define how concurrent inserts and updates affect traversal, and use a consistent snapshot when the use case requires a stable view across pages.",
+    "key_concepts": [
+      "cursor pagination",
+      "stable ordering",
+      "unique tie-breaker",
+      "concurrent updates",
+      "snapshot consistency"
+    ],
+    "follow_up_questions": [
+      "Why is sorting only by a non-unique timestamp insufficient for reliable pagination?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_034",
+    "topic": "Caching Strategy",
+    "subtopic": "Sensitive Response Caching",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API returns user-specific data. How would you decide whether a CDN or shared cache can safely cache its responses?",
+    "sample_answer": "Determine whether the response is public or personalized and whether it contains sensitive data. Configure Cache-Control directives and cache keys carefully, and avoid shared caching of private responses unless the design explicitly guarantees correct isolation. Never rely on a cache key that ignores relevant authorization context.",
+    "key_concepts": [
+      "Cache-Control",
+      "private data",
+      "shared caches",
+      "cache keys",
+      "data isolation"
+    ],
+    "follow_up_questions": [
+      "What risk arises if a shared cache serves one user's response to another user?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_035",
+    "topic": "API Reliability",
+    "subtopic": "Graceful Degradation",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API combines data from three independent services, but one service becomes unavailable. How can you keep the endpoint useful without hiding failures?",
+    "sample_answer": "Define which dependencies are essential and which can fail independently. Use bounded timeouts and concurrency, return partial results only when the contract permits it, and clearly indicate unavailable sections. Add fallbacks only when their behavior is safe and observable.",
+    "key_concepts": [
+      "graceful degradation",
+      "partial responses",
+      "timeouts",
+      "fallbacks",
+      "dependency isolation"
+    ],
+    "follow_up_questions": [
+      "How would you distinguish a valid partial response from a successful complete response in the API contract?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_036",
+    "topic": "API Versioning",
+    "subtopic": "Deprecation and Migration",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How would you retire an old API version when you cannot immediately upgrade every client?",
+    "sample_answer": "Identify active consumers, announce a deprecation timeline, publish migration guidance, and monitor usage by version. Support both versions during a defined transition where feasible, provide clear deprecation or sunset information, and retire the old version only after the agreed compatibility process.",
+    "key_concepts": [
+      "API deprecation",
+      "consumer inventory",
+      "migration plan",
+      "usage monitoring",
+      "backward compatibility"
+    ],
+    "follow_up_questions": [
+      "How would you handle clients that cannot be updated before the planned retirement date?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_037",
+    "topic": "API Reliability",
+    "subtopic": "Overload Protection",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Your API is overloaded and its queue of pending work keeps growing. What design choices can prevent the service from collapsing?",
+    "sample_answer": "Apply backpressure through bounded queues and concurrency, enforce deadlines and rate limits, and reject excess work predictably. Use load shedding for lower-priority requests and move long-running work to a durable queue where appropriate. Monitor saturation and recovery behavior during load tests.",
+    "key_concepts": [
+      "backpressure",
+      "bounded queues",
+      "load shedding",
+      "deadlines",
+      "saturation"
+    ],
+    "follow_up_questions": [
+      "Why can an unbounded queue make an overloaded service progressively less reliable?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "backend_api_038",
+    "topic": "API Observability",
+    "subtopic": "Request Correlation",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A request passes through an API gateway and several backend services. How would you correlate its logs and traces to investigate a slow response?",
+    "sample_answer": "Use distributed tracing and propagate trace context across service boundaries. Include trace or request identifiers in structured logs, record dependency timing, and inspect spans to identify where time is spent. Avoid treating an untrusted client-provided correlation ID as proof of identity.",
+    "key_concepts": [
+      "distributed tracing",
+      "trace context",
+      "correlation IDs",
+      "dependency latency",
+      "structured logs"
+    ],
+    "follow_up_questions": [
+      "What is the difference between a request ID and a distributed trace?"
+    ],
+    "estimated_time_minutes": 3
+  }
+]

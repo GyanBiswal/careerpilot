@@ -1,0 +1,962 @@
+[
+  {
+    "id": "html_css_001",
+    "topic": "HTML",
+    "subtopic": "HTML Basics",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is HTML, and what is its role in web development?",
+    "sample_answer": "HTML stands for HyperText Markup Language. It defines the structure and content of a webpage using elements such as headings, paragraphs, images, and links.",
+    "key_concepts": [
+      "markup language",
+      "document structure",
+      "HTML elements"
+    ],
+    "follow_up_questions": [
+      "How does HTML differ from CSS and JavaScript?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_002",
+    "topic": "HTML",
+    "subtopic": "Document Structure",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the purpose of DOCTYPE in an HTML document?",
+    "sample_answer": "The DOCTYPE declaration tells the browser to use standards mode. In modern HTML, <!DOCTYPE html> is placed at the beginning of the document.",
+    "key_concepts": [
+      "DOCTYPE",
+      "standards mode",
+      "HTML document"
+    ],
+    "follow_up_questions": [
+      "What can happen when a browser uses quirks mode?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_003",
+    "topic": "HTML",
+    "subtopic": "HTML Elements",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between an HTML element, a tag, and an attribute?",
+    "sample_answer": "A tag is the markup used to start or end an element. An element is the complete HTML structure, and an attribute provides additional information, such as an image's src or alt value.",
+    "key_concepts": [
+      "elements",
+      "tags",
+      "attributes"
+    ],
+    "follow_up_questions": [
+      "What is the difference between an attribute and a property in JavaScript?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_004",
+    "topic": "HTML",
+    "subtopic": "Semantic HTML",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is semantic HTML, and why is it important?",
+    "sample_answer": "Semantic HTML uses elements that describe the meaning of their content, such as header, nav, main, article, and footer. It improves accessibility, maintainability, and the ability of search engines to understand page structure.",
+    "key_concepts": [
+      "semantic elements",
+      "accessibility",
+      "SEO"
+    ],
+    "follow_up_questions": [
+      "When would you use article instead of section?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_005",
+    "topic": "HTML",
+    "subtopic": "Semantic HTML",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between div and semantic elements such as main or section?",
+    "sample_answer": "A div is a generic container with no inherent semantic meaning. Elements such as main and section communicate the purpose of their content, helping browsers, assistive technologies, and developers understand the page structure.",
+    "key_concepts": [
+      "div",
+      "main",
+      "section",
+      "semantics"
+    ],
+    "follow_up_questions": [
+      "Why should a page generally have only one main landmark?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_006",
+    "topic": "HTML",
+    "subtopic": "Forms",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do HTML forms work, and what are their important attributes?",
+    "sample_answer": "A form collects user input and can submit it to a server. Important attributes include action, which specifies the destination, method, which specifies the HTTP method, and name attributes, which identify submitted fields.",
+    "key_concepts": [
+      "form",
+      "action",
+      "method",
+      "name"
+    ],
+    "follow_up_questions": [
+      "What is the difference between GET and POST in form submission?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_007",
+    "topic": "HTML",
+    "subtopic": "Forms",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between required, disabled, and readonly form attributes?",
+    "sample_answer": "Required prevents a valid form submission when the field is empty. Disabled fields generally cannot be interacted with and are not submitted. Readonly fields cannot be edited by the user but are normally included in form submission.",
+    "key_concepts": [
+      "required",
+      "disabled",
+      "readonly",
+      "form submission"
+    ],
+    "follow_up_questions": [
+      "Can a readonly input be submitted with a form?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_008",
+    "topic": "HTML",
+    "subtopic": "Accessibility",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do you make an HTML form accessible?",
+    "sample_answer": "Associate each input with a label, use suitable input types, provide clear instructions and error messages, preserve keyboard access, and use semantic form controls. Important errors should be communicated to assistive technologies.",
+    "key_concepts": [
+      "labels",
+      "keyboard navigation",
+      "error messages",
+      "assistive technology"
+    ],
+    "follow_up_questions": [
+      "How would you announce a dynamically displayed validation error to a screen reader?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_009",
+    "topic": "HTML",
+    "subtopic": "Images and Links",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why is the alt attribute important for images?",
+    "sample_answer": "The alt attribute provides a text alternative for an image. Screen readers can announce it, and it can be displayed when an image fails to load. Decorative images should generally use an empty alt attribute.",
+    "key_concepts": [
+      "alt text",
+      "screen readers",
+      "decorative images"
+    ],
+    "follow_up_questions": [
+      "Should an image inside a link describe the image or the link's purpose?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_010",
+    "topic": "HTML",
+    "subtopic": "Block and Inline Elements",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between block and inline elements?",
+    "sample_answer": "Block elements normally start on a new line and occupy the available width. Inline elements flow within text and generally occupy only the space their content needs. CSS can change their display behavior.",
+    "key_concepts": [
+      "display",
+      "block",
+      "inline",
+      "normal flow"
+    ],
+    "follow_up_questions": [
+      "How does inline-block differ from inline?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_011",
+    "topic": "HTML",
+    "subtopic": "Accessibility",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why should you use a button instead of a clickable div?",
+    "sample_answer": "A button already supports keyboard interaction, focus, and an accessible role. A clickable div requires additional keyboard handling, focus management, and accessibility attributes to provide equivalent behavior.",
+    "key_concepts": [
+      "native controls",
+      "keyboard access",
+      "focus",
+      "ARIA"
+    ],
+    "follow_up_questions": [
+      "When would you use an anchor instead of a button?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_012",
+    "topic": "HTML",
+    "subtopic": "HTML Forms and Validation",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How does built-in HTML form validation work?",
+    "sample_answer": "HTML supports validation through attributes such as required, type, min, max, minlength, and pattern. Browsers can prevent submission when constraints fail, but server-side validation is still necessary because client-side checks can be bypassed.",
+    "key_concepts": [
+      "constraint validation",
+      "required",
+      "pattern",
+      "server validation"
+    ],
+    "follow_up_questions": [
+      "Why must a backend validate data even when the frontend validates it?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_013",
+    "topic": "HTML",
+    "subtopic": "HTML Metadata",
+    "difficulty": "easy",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Why are meta charset and the viewport meta tag used?",
+    "sample_answer": "The charset declaration specifies the document's character encoding, commonly UTF-8. The viewport meta tag helps mobile browsers size and scale the page appropriately for the device's viewport.",
+    "key_concepts": [
+      "UTF-8",
+      "viewport",
+      "mobile rendering"
+    ],
+    "follow_up_questions": [
+      "What problems can occur when the viewport meta tag is missing?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_014",
+    "topic": "CSS",
+    "subtopic": "CSS Basics",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is CSS, and what are the different ways to apply it?",
+    "sample_answer": "CSS controls the presentation and layout of HTML content. It can be applied inline using a style attribute, internally through a style element, or externally through a stylesheet linked with link.",
+    "key_concepts": [
+      "styling",
+      "inline CSS",
+      "internal CSS",
+      "external CSS"
+    ],
+    "follow_up_questions": [
+      "Why is an external stylesheet generally preferred for a larger application?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_015",
+    "topic": "CSS",
+    "subtopic": "CSS Box Model",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the CSS box model?",
+    "sample_answer": "The box model describes an element using content, padding, border, and margin. By default, the declared width and height apply to the content box, excluding padding and border.",
+    "key_concepts": [
+      "content",
+      "padding",
+      "border",
+      "margin"
+    ],
+    "follow_up_questions": [
+      "What does box-sizing: border-box change?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_016",
+    "topic": "CSS",
+    "subtopic": "Selectors",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What are CSS selectors, and what is the difference between class and ID selectors?",
+    "sample_answer": "Selectors identify the elements that CSS rules target. A class selector starts with a dot and can be reused across elements. An ID selector starts with a hash and should identify a unique element within the document.",
+    "key_concepts": [
+      "element selector",
+      "class selector",
+      "ID selector"
+    ],
+    "follow_up_questions": [
+      "Why is excessive use of ID selectors discouraged in reusable component styling?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "html_css_017",
+    "topic": "CSS",
+    "subtopic": "Specificity",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is CSS specificity, and how does the browser resolve conflicting rules?",
+    "sample_answer": "When declarations compete, the browser considers cascade origin and importance, cascade layers, specificity, and source order according to the cascade rules. Specificity generally ranks ID selectors above class and attribute selectors, which rank above type selectors.",
+    "key_concepts": [
+      "cascade",
+      "specificity",
+      "source order",
+      "!important"
+    ],
+    "follow_up_questions": [
+      "Why does adding another class not necessarily override a declaration marked !important?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_018",
+    "topic": "CSS",
+    "subtopic": "Positioning",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "Explain the difference between static, relative, absolute, fixed, and sticky positioning.",
+    "sample_answer": "Static follows normal flow. Relative remains in flow but can be visually offset. Absolute is removed from normal flow and positioned relative to its containing block. Fixed is positioned relative to its fixed-positioning containing block, usually the viewport. Sticky behaves like normal flow until its scrolling threshold is reached within its scrolling context.",
+    "key_concepts": [
+      "normal flow",
+      "containing block",
+      "fixed",
+      "sticky"
+    ],
+    "follow_up_questions": [
+      "Which ancestor properties can affect the containing block of an absolutely or fixed-positioned element?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_019",
+    "topic": "CSS",
+    "subtopic": "Flexbox",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is Flexbox, and when would you use it?",
+    "sample_answer": "Flexbox is a one-dimensional layout system for arranging items in a row or column. It is useful for navigation bars, aligned buttons, and distributing space along a main axis.",
+    "key_concepts": [
+      "flex container",
+      "flex items",
+      "main axis",
+      "cross axis"
+    ],
+    "follow_up_questions": [
+      "What is the difference between justify-content and align-items?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_020",
+    "topic": "CSS",
+    "subtopic": "CSS Grid",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is CSS Grid, and how does it differ from Flexbox?",
+    "sample_answer": "CSS Grid is a two-dimensional layout system for controlling rows and columns together. Flexbox is primarily one-dimensional, so Grid suits complex page layouts while Flexbox often suits alignment within a component.",
+    "key_concepts": [
+      "grid container",
+      "rows",
+      "columns",
+      "one-dimensional layout"
+    ],
+    "follow_up_questions": [
+      "How would you create responsive columns using repeat and minmax?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_021",
+    "topic": "CSS",
+    "subtopic": "Responsive Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is responsive web design, and how do media queries help?",
+    "sample_answer": "Responsive design allows layouts to adapt to different screen sizes and conditions. Media queries apply CSS when conditions such as viewport width are met, allowing layouts to change for smaller or larger screens.",
+    "key_concepts": [
+      "responsive design",
+      "media queries",
+      "breakpoints"
+    ],
+    "follow_up_questions": [
+      "Why should breakpoints be based on content rather than specific device names?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_022",
+    "topic": "CSS",
+    "subtopic": "CSS Units",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between px, em, rem, %, vw, and vh?",
+    "sample_answer": "CSS px is a reference pixel. Em generally depends on the element's font size for font-related properties and on the element's computed font size for many other properties. Rem uses the root element's font size. Percentages depend on the relevant property and reference context. Vw and vh are based on viewport dimensions.",
+    "key_concepts": [
+      "relative units",
+      "absolute units",
+      "viewport units",
+      "scalable layouts"
+    ],
+    "follow_up_questions": [
+      "Why are rem units useful for consistent typography and spacing?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_023",
+    "topic": "CSS",
+    "subtopic": "Pseudo-classes and Pseudo-elements",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between a pseudo-class and a pseudo-element?",
+    "sample_answer": "A pseudo-class selects an element based on a state or relationship, such as :hover, :focus-visible, or :nth-child(). A pseudo-element targets a specific part of an element or generated content, such as ::before or ::first-letter.",
+    "key_concepts": [
+      "pseudo-classes",
+      "pseudo-elements",
+      ":hover",
+      "::before"
+    ],
+    "follow_up_questions": [
+      "Why should essential information not be placed only in generated CSS content?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_024",
+    "topic": "CSS",
+    "subtopic": "CSS Debugging",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you debug an element that is not appearing in the expected position?",
+    "sample_answer": "I would inspect the element in browser developer tools, check its computed styles and box model, identify conflicting declarations, inspect its parent layout and containing block, and test changes incrementally.",
+    "key_concepts": [
+      "developer tools",
+      "computed styles",
+      "box model",
+      "layout debugging"
+    ],
+    "follow_up_questions": [
+      "How would you determine whether a parent container is causing the layout problem?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_025",
+    "topic": "CSS",
+    "subtopic": "Overflow and Visibility",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is the difference between display: none, visibility: hidden, and opacity: 0?",
+    "sample_answer": "Display none removes the element from layout and typically from the accessibility tree. Visibility hidden preserves its layout space but hides it. Opacity zero makes it transparent while preserving layout, and the element may still receive pointer or keyboard interaction unless other properties or logic prevent it.",
+    "key_concepts": [
+      "layout",
+      "visibility",
+      "opacity",
+      "accessibility"
+    ],
+    "follow_up_questions": [
+      "Why is opacity: 0 not sufficient for hiding an interactive element from keyboard users?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "html_css_026",
+    "topic": "HTML",
+    "subtopic": "Accessibility",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do you evaluate accessibility when reviewing a complex frontend feature?",
+    "sample_answer": "I check semantic structure, accessible names, keyboard operation, visible focus, screen-reader announcements, color contrast, error handling, and zoom or reflow behavior. I combine automated checks with manual keyboard and assistive-technology testing.",
+    "key_concepts": [
+      "WCAG",
+      "keyboard testing",
+      "accessible names",
+      "manual testing"
+    ],
+    "follow_up_questions": [
+      "Which accessibility issues are commonly missed by automated testing?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_027",
+    "topic": "CSS",
+    "subtopic": "CSS Architecture",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you organize CSS in a large frontend application to keep it maintainable?",
+    "sample_answer": "I would define consistent naming conventions, reusable design tokens, clear component boundaries, and predictable styling rules. I would limit global styles, avoid unnecessary specificity, document exceptions, and choose an approach such as CSS Modules, BEM, or a utility-first system based on the project.",
+    "key_concepts": [
+      "CSS architecture",
+      "design tokens",
+      "component styles",
+      "naming conventions"
+    ],
+    "follow_up_questions": [
+      "How would you prevent style leakage between independently developed components?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_028",
+    "topic": "CSS",
+    "subtopic": "CSS Architecture",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you decide between CSS Modules, BEM, utility classes, and CSS-in-JS?",
+    "sample_answer": "I would compare isolation, team familiarity, reuse, runtime cost, build tooling, theming needs, and debugging experience. CSS Modules provide local scoping, BEM uses explicit naming conventions, utility classes compose predefined styles, and CSS-in-JS can colocate styling with components but may introduce runtime or tooling trade-offs depending on the implementation.",
+    "key_concepts": [
+      "scoping",
+      "CSS Modules",
+      "BEM",
+      "utility-first CSS",
+      "CSS-in-JS"
+    ],
+    "follow_up_questions": [
+      "How would your choice change for a shared design system used by several teams?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "html_css_029",
+    "topic": "CSS",
+    "subtopic": "Layout Debugging",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "A responsive page overflows horizontally on mobile. How would you identify and fix the root cause?",
+    "sample_answer": "I would reproduce the issue at the affected viewport, use developer tools to find elements extending beyond the viewport, and inspect fixed widths, min-width constraints, long content, grid tracks, flex items, and positioning. I would fix the underlying constraint instead of hiding the overflow globally.",
+    "key_concepts": [
+      "horizontal overflow",
+      "min-width",
+      "flex shrink",
+      "grid sizing",
+      "responsive debugging"
+    ],
+    "follow_up_questions": [
+      "Why can min-width: auto cause unexpected overflow in a flex item?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "html_css_030",
+    "topic": "CSS",
+    "subtopic": "Responsive Design",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How do you choose between fixed breakpoints, fluid layouts, and container queries?",
+    "sample_answer": "I use fluid sizing when content can scale smoothly, media queries when the viewport or environment should change the layout, and container queries when a component must respond to the space available in its parent. I choose breakpoints where the content stops working well rather than relying only on device categories.",
+    "key_concepts": [
+      "fluid layouts",
+      "media queries",
+      "container queries",
+      "content-driven breakpoints"
+    ],
+    "follow_up_questions": [
+      "When can container queries simplify a reusable card component?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_031",
+    "topic": "CSS",
+    "subtopic": "Flexbox and Grid",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you choose between Flexbox and Grid for a complex responsive dashboard?",
+    "sample_answer": "I would generally use Grid for the dashboard's two-dimensional page structure and Flexbox for one-dimensional alignment inside individual panels. I would also consider content sizing, responsiveness, source order, and whether items need to span rows or columns.",
+    "key_concepts": [
+      "two-dimensional layout",
+      "one-dimensional layout",
+      "grid tracks",
+      "component layout"
+    ],
+    "follow_up_questions": [
+      "How would you build a dashboard with a collapsible sidebar and a fluid main area?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_032",
+    "topic": "CSS",
+    "subtopic": "CSS Specificity and Cascade",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you resolve persistent CSS conflicts in a large application without relying on !important?",
+    "sample_answer": "I would inspect the winning declaration in developer tools, identify the cascade layer and specificity involved, and simplify competing selectors. I would establish predictable layering and component boundaries, remove obsolete rules, and use !important only when there is a justified exception.",
+    "key_concepts": [
+      "cascade layers",
+      "specificity management",
+      "debugging",
+      "maintainability"
+    ],
+    "follow_up_questions": [
+      "How do cascade layers change the way normal declarations compete?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_033",
+    "topic": "HTML",
+    "subtopic": "Accessibility Decisions",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "When should you use ARIA, and when should you prefer native HTML semantics?",
+    "sample_answer": "I prefer native semantic elements because they provide built-in roles and behaviors. I use ARIA when native HTML cannot adequately communicate a custom widget's role, state, or relationships, and I ensure that required keyboard behavior is implemented as well.",
+    "key_concepts": [
+      "native semantics",
+      "ARIA roles",
+      "accessible states",
+      "keyboard interaction"
+    ],
+    "follow_up_questions": [
+      "Why does adding role=\"button\" to a div not automatically give it native button behavior?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_034",
+    "topic": "HTML",
+    "subtopic": "Accessibility Decisions",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you make a dynamically updated form accessible when validation errors appear?",
+    "sample_answer": "I would associate errors with their inputs, mark invalid fields appropriately, provide clear text explanations, and ensure users can discover the errors. Depending on the interaction, I would move focus to an error summary or use a suitable live region to announce important updates without producing excessive announcements.",
+    "key_concepts": [
+      "aria-describedby",
+      "aria-invalid",
+      "live regions",
+      "focus management"
+    ],
+    "follow_up_questions": [
+      "When would you prefer an error summary over a live announcement?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "html_css_035",
+    "topic": "CSS",
+    "subtopic": "Frontend Performance",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How can CSS affect frontend performance?",
+    "sample_answer": "Large stylesheets, expensive style recalculation, repeated layout work, and paint-heavy effects can contribute to rendering costs. I would measure performance, reduce unnecessary CSS and DOM complexity, avoid layout thrashing, and prefer transform or opacity for suitable animations when profiling supports that choice.",
+    "key_concepts": [
+      "style recalculation",
+      "layout",
+      "paint",
+      "compositing",
+      "profiling"
+    ],
+    "follow_up_questions": [
+      "Why can animating width be more expensive than animating transform?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_036",
+    "topic": "Browser",
+    "subtopic": "Rendering Pipeline",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What are the main stages involved in rendering a webpage in the browser?",
+    "sample_answer": "The browser parses HTML into the DOM and CSS into CSSOM data, combines relevant information to build the render tree, calculates layout, paints visual output, and composites layers when needed. JavaScript, resource loading, and rendering optimizations can affect this process.",
+    "key_concepts": [
+      "DOM",
+      "CSSOM",
+      "render tree",
+      "layout",
+      "paint",
+      "compositing"
+    ],
+    "follow_up_questions": [
+      "What is the difference between layout and paint?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_037",
+    "topic": "Browser",
+    "subtopic": "Layout and Reflow",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "What is layout thrashing, and how can you prevent it?",
+    "sample_answer": "Layout thrashing happens when code repeatedly alternates between changing styles or the DOM and reading layout-dependent properties, forcing synchronous layout calculations. I would batch DOM reads before writes, minimize repeated measurements, and use browser performance tools to identify the bottleneck.",
+    "key_concepts": [
+      "forced synchronous layout",
+      "DOM reads",
+      "DOM writes",
+      "performance profiling"
+    ],
+    "follow_up_questions": [
+      "Which browser APIs or element properties can trigger a layout flush after DOM changes?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_038",
+    "topic": "CSS",
+    "subtopic": "Frontend Performance",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you optimize font and image loading to improve the perceived performance of a page?",
+    "sample_answer": "I would serve appropriately sized modern images, specify image dimensions to reduce layout shifts, lazy-load below-the-fold images, and prioritize the main visual when appropriate. I would subset and preload critical fonts selectively, use suitable font-display settings, and validate improvements using real performance measurements.",
+    "key_concepts": [
+      "image sizing",
+      "lazy loading",
+      "font-display",
+      "preloading",
+      "CLS",
+      "LCP"
+    ],
+    "follow_up_questions": [
+      "Why should the main above-the-fold image generally not be lazy-loaded?"
+    ],
+    "estimated_time_minutes": 5
+  },
+  {
+    "id": "html_css_039",
+    "topic": "CSS",
+    "subtopic": "Accessibility and Responsive Typography",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you implement responsive typography without compromising accessibility?",
+    "sample_answer": "I would use scalable units, sensible minimum and maximum sizes, and fluid techniques such as clamp() where appropriate. I would test text resizing, browser zoom, line lengths, contrast, and reflow to ensure content remains readable without clipping or overlap.",
+    "key_concepts": [
+      "rem",
+      "clamp",
+      "zoom",
+      "reflow",
+      "readability"
+    ],
+    "follow_up_questions": [
+      "What problems can occur when font sizes are defined only with fixed pixel values?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "html_css_040",
+    "topic": "CSS",
+    "subtopic": "Design Systems",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Frontend Developer"
+    ],
+    "question": "How would you design CSS custom properties for a reusable design system?",
+    "sample_answer": "I would define semantic custom properties for colors, spacing, typography, borders, and component states. I would use consistent naming, sensible defaults, and scoped overrides for themes, while documenting tokens and validating contrast and component behavior across supported contexts.",
+    "key_concepts": [
+      "CSS custom properties",
+      "design tokens",
+      "theming",
+      "component reuse"
+    ],
+    "follow_up_questions": [
+      "How do CSS custom properties differ from Sass variables at runtime?"
+    ],
+    "estimated_time_minutes": 4
+  }
+]

@@ -1,0 +1,723 @@
+[
+  {
+    "id": "databases_001",
+    "topic": "Database Fundamentals",
+    "subtopic": "SQL vs NoSQL",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is the difference between SQL and NoSQL databases?",
+    "sample_answer": "SQL databases typically organize data into relational tables with defined schemas and relationships. NoSQL databases use models such as documents, key-value pairs, or graphs. The choice depends on data structure, consistency requirements, relationships, and access patterns.",
+    "key_concepts": [
+      "SQL",
+      "NoSQL",
+      "relational model",
+      "document model"
+    ],
+    "follow_up_questions": [
+      "When might you choose PostgreSQL over MongoDB?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "databases_002",
+    "topic": "Database Fundamentals",
+    "subtopic": "Relational vs Document Databases",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How does a relational database differ from a document database?",
+    "sample_answer": "A relational database stores data in tables with rows, columns, and relationships. A document database stores records as documents, often using JSON-like structures. Relational models are useful for structured relationships, while documents can conveniently represent nested or variable-shaped data.",
+    "key_concepts": [
+      "tables",
+      "rows",
+      "documents",
+      "schema flexibility"
+    ],
+    "follow_up_questions": [
+      "How might you represent a customer with multiple addresses in each model?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_003",
+    "topic": "PostgreSQL",
+    "subtopic": "PostgreSQL Fundamentals",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is PostgreSQL, and why might a backend application use it?",
+    "sample_answer": "PostgreSQL is an open-source relational database that supports SQL, transactions, constraints, indexes, and complex relationships. It is useful when applications need reliable data integrity, structured queries, and transactional operations.",
+    "key_concepts": [
+      "PostgreSQL",
+      "relational database",
+      "transactions",
+      "constraints"
+    ],
+    "follow_up_questions": [
+      "What kinds of applications benefit from PostgreSQL's relational model?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "databases_004",
+    "topic": "MongoDB",
+    "subtopic": "Documents and Collections",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are documents and collections in MongoDB?",
+    "sample_answer": "A document is a BSON record containing fields and values. A collection is a group of documents, similar in broad purpose to a table in a relational database. Documents in a collection can have different structures, although schema validation can enforce rules.",
+    "key_concepts": [
+      "MongoDB",
+      "BSON",
+      "documents",
+      "collections",
+      "schema validation"
+    ],
+    "follow_up_questions": [
+      "What is the role of the _id field in a MongoDB document?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "databases_005",
+    "topic": "Database Design",
+    "subtopic": "Primary and Foreign Keys",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are primary keys and foreign keys, and why are they important?",
+    "sample_answer": "A primary key uniquely identifies a row in a table and cannot contain duplicate or null values. A foreign key references a key in another or the same table, helping enforce valid relationships and referential integrity.",
+    "key_concepts": [
+      "primary key",
+      "foreign key",
+      "uniqueness",
+      "referential integrity"
+    ],
+    "follow_up_questions": [
+      "What can happen when an application tries to delete a row referenced by a foreign key?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_006",
+    "topic": "Database Design",
+    "subtopic": "Relationship Types",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Explain one-to-one, one-to-many, and many-to-many database relationships.",
+    "sample_answer": "One-to-one associates each record with at most one record on the other side. One-to-many lets one record relate to multiple records. Many-to-many allows multiple records on both sides and is commonly represented in relational databases using a junction table.",
+    "key_concepts": [
+      "one-to-one",
+      "one-to-many",
+      "many-to-many",
+      "junction table"
+    ],
+    "follow_up_questions": [
+      "How would you model students enrolling in multiple courses?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_007",
+    "topic": "Database Design",
+    "subtopic": "Schema Design",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What factors should you consider when designing a database schema for an application?",
+    "sample_answer": "Identify the entities, attributes, relationships, constraints, and common access patterns. Choose appropriate data types, define keys, prevent unnecessary duplication, and consider expected query performance and future changes.",
+    "key_concepts": [
+      "entities",
+      "relationships",
+      "constraints",
+      "data types",
+      "access patterns"
+    ],
+    "follow_up_questions": [
+      "Why should schema design consider how the application reads and writes data?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_008",
+    "topic": "Database Design",
+    "subtopic": "Normalization and Denormalization",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are normalization and denormalization, and when would you use each?",
+    "sample_answer": "Normalization organizes data to reduce unnecessary duplication and update anomalies. Denormalization deliberately duplicates or combines data to improve common read patterns, but it introduces consistency and update-maintenance costs.",
+    "key_concepts": [
+      "normalization",
+      "denormalization",
+      "data duplication",
+      "update anomalies"
+    ],
+    "follow_up_questions": [
+      "Why might a reporting-heavy application benefit from denormalized data?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_009",
+    "topic": "Database Performance",
+    "subtopic": "Indexes",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is a database index, and what are its advantages and disadvantages?",
+    "sample_answer": "An index helps the database locate matching records without scanning every row or document in many cases. It can speed up reads, filtering, sorting, and some joins, but consumes storage and adds overhead to inserts, updates, and deletes.",
+    "key_concepts": [
+      "index",
+      "query performance",
+      "storage overhead",
+      "write overhead"
+    ],
+    "follow_up_questions": [
+      "Why should you avoid creating an index on every field?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_010",
+    "topic": "Transactions",
+    "subtopic": "ACID Properties",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What are ACID properties in database transactions?",
+    "sample_answer": "Atomicity means all operations succeed or none do. Consistency preserves database rules. Isolation controls interference between concurrent transactions. Durability means committed changes survive failures according to the database's durability guarantees.",
+    "key_concepts": [
+      "atomicity",
+      "consistency",
+      "isolation",
+      "durability",
+      "transactions"
+    ],
+    "follow_up_questions": [
+      "Why is a transaction useful when transferring money between two accounts?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_011",
+    "topic": "Database Fundamentals",
+    "subtopic": "Joins Conceptually",
+    "difficulty": "easy",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is a database join, and why is it useful?",
+    "sample_answer": "A join combines related data from multiple tables using a matching condition. For example, an application can retrieve an order alongside customer information without storing all customer details repeatedly in every order row.",
+    "key_concepts": [
+      "joins",
+      "related tables",
+      "matching keys",
+      "data retrieval"
+    ],
+    "follow_up_questions": [
+      "Conceptually, how does a LEFT JOIN differ from an INNER JOIN?"
+    ],
+    "estimated_time_minutes": 2
+  },
+  {
+    "id": "databases_012",
+    "topic": "Database Performance",
+    "subtopic": "Connection Pooling",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is database connection pooling, and why is it useful?",
+    "sample_answer": "A connection pool reuses a limited set of database connections instead of opening a new connection for every request. This reduces connection setup overhead and helps control database load. Pool size and connection acquisition timeouts must be configured appropriately.",
+    "key_concepts": [
+      "connection pool",
+      "connection reuse",
+      "resource management",
+      "pool size"
+    ],
+    "follow_up_questions": [
+      "What can happen if the application creates too many database connections?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_013",
+    "topic": "Database Performance",
+    "subtopic": "Basic Query Optimization",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A database query is slow. What basic steps would you take to improve its performance?",
+    "sample_answer": "Measure the query's execution time, inspect its execution plan, check whether suitable indexes exist, and avoid retrieving unnecessary rows or columns. Also check joins, filtering, data volume, and whether the application makes excessive repeated queries.",
+    "key_concepts": [
+      "execution plan",
+      "indexes",
+      "filtering",
+      "query profiling",
+      "data volume"
+    ],
+    "follow_up_questions": [
+      "Why is measuring a query better than adding indexes based only on guesswork?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_014",
+    "topic": "Database Selection",
+    "subtopic": "Choosing SQL vs NoSQL",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How would you choose between PostgreSQL and MongoDB for a new application?",
+    "sample_answer": "Choose based on relationships, consistency needs, query patterns, and schema requirements rather than popularity. PostgreSQL is often a strong fit for relational data and complex transactions. MongoDB can fit document-oriented data with flexible structures and access patterns that benefit from embedded documents.",
+    "key_concepts": [
+      "PostgreSQL",
+      "MongoDB",
+      "data relationships",
+      "transactions",
+      "access patterns"
+    ],
+    "follow_up_questions": [
+      "Could a single application use both databases, and what trade-offs would that introduce?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_015",
+    "topic": "Database Design",
+    "subtopic": "Embedding vs Referencing",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "In MongoDB, when would you embed related data in a document instead of storing references to separate documents?",
+    "sample_answer": "Embedding works well when related data is usually read together, remains reasonably bounded, and belongs naturally to the parent document. References are useful when data is shared, independently updated, or can grow without a practical bound.",
+    "key_concepts": [
+      "embedding",
+      "references",
+      "document modeling",
+      "read patterns",
+      "document growth"
+    ],
+    "follow_up_questions": [
+      "Why might embedding an unlimited number of child records cause problems?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_016",
+    "topic": "Database Fundamentals",
+    "subtopic": "Consistency and Constraints",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "fresher",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Why should important data rules be enforced by the database instead of only by the application?",
+    "sample_answer": "Database constraints provide a consistent final safeguard even when data is written through multiple application paths. Constraints such as uniqueness, foreign keys, and not-null rules help prevent invalid states caused by bugs or concurrent requests.",
+    "key_concepts": [
+      "database constraints",
+      "uniqueness",
+      "referential integrity",
+      "data integrity"
+    ],
+    "follow_up_questions": [
+      "Why might checking that an email is unused in application code alone still allow duplicate accounts?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_017",
+    "topic": "Database Performance",
+    "subtopic": "Indexing Strategy",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An orders endpoint filters by customer_id and status, then sorts by created_at. How would you decide whether to create a composite index?",
+    "sample_answer": "Inspect the actual query and execution plan, then evaluate a composite index that supports the filtering and ordering pattern. Column order matters because it affects which predicates and orderings can use the index. Validate the benefit against storage costs and write overhead using representative data.",
+    "key_concepts": [
+      "composite index",
+      "column order",
+      "execution plan",
+      "filtering",
+      "sorting",
+      "write overhead"
+    ],
+    "follow_up_questions": [
+      "Why might an index on status alone be less useful if that field has very few distinct values?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_018",
+    "topic": "Database Performance",
+    "subtopic": "Query Plan Reasoning",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A query becomes slow as a table grows, even though an index exists. How would you use an execution plan to investigate?",
+    "sample_answer": "Inspect the plan for sequential scans, expensive joins, sorts, row-estimate inaccuracies, and differences between estimated and actual work. Check whether predicates match the index, whether the index is selective enough, and whether statistics are current. Change the query or index only after identifying the bottleneck.",
+    "key_concepts": [
+      "EXPLAIN",
+      "EXPLAIN ANALYZE",
+      "sequential scan",
+      "selectivity",
+      "statistics",
+      "join strategy"
+    ],
+    "follow_up_questions": [
+      "Why might a sequential scan be faster than an index scan for some queries?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_019",
+    "topic": "Transactions",
+    "subtopic": "Transaction Isolation",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is transaction isolation, and how can choosing an isolation level affect concurrent requests?",
+    "sample_answer": "Isolation determines how concurrent transactions observe one another's changes and which anomalies are possible. Stronger isolation can improve correctness for complex operations but may increase contention, retries, or serialization failures. The appropriate level depends on the consistency requirements and the database's implementation.",
+    "key_concepts": [
+      "transaction isolation",
+      "concurrency",
+      "dirty reads",
+      "serialization failures",
+      "contention"
+    ],
+    "follow_up_questions": [
+      "When might an application need to retry a transaction that fails due to a serialization conflict?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_020",
+    "topic": "Database Reliability",
+    "subtopic": "Consistency Trade-offs",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An application reads data from a replica immediately after updating it on the primary and sometimes sees the old value. How would you explain and address this?",
+    "sample_answer": "The replica may lag behind the primary, causing temporarily stale reads. Depending on the requirement, route critical read-after-write operations to the primary, use session or consistency guarantees supported by the system, or wait until replication catches up. Stronger consistency can increase latency or reduce availability under some failures.",
+    "key_concepts": [
+      "replication lag",
+      "read-after-write consistency",
+      "primary",
+      "replica",
+      "consistency trade-offs"
+    ],
+    "follow_up_questions": [
+      "Which application features can tolerate stale reads, and which usually cannot?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_021",
+    "topic": "Database Migrations",
+    "subtopic": "Schema Evolution",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "How would you add a required field to a large production table without breaking the running application?",
+    "sample_answer": "Use an incremental migration. Add the field in a backward-compatible way, deploy code that can handle old and new records, backfill existing data in controlled batches, validate completeness, and enforce the constraint when safe. Plan monitoring and rollback or forward-recovery steps.",
+    "key_concepts": [
+      "schema migration",
+      "backward compatibility",
+      "backfill",
+      "rolling deployment",
+      "constraint enforcement"
+    ],
+    "follow_up_questions": [
+      "Why can adding a non-null constraint immediately be risky for a large table?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_022",
+    "topic": "Database Performance",
+    "subtopic": "Connection Pool Bottlenecks",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API's latency increases under load, and many requests are waiting to acquire database connections. How would you diagnose and fix the problem?",
+    "sample_answer": "Monitor active and idle connections, pool wait time, query duration, and database capacity. Look for slow queries, leaked connections, long transactions, or excessive application concurrency. Tune pool sizes against the database's total connection budget and reduce connection hold times before simply increasing the pool.",
+    "key_concepts": [
+      "connection pool saturation",
+      "pool wait time",
+      "slow queries",
+      "connection leaks",
+      "database capacity"
+    ],
+    "follow_up_questions": [
+      "Why can increasing the connection-pool size make an overloaded database slower?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_023",
+    "topic": "Database Performance",
+    "subtopic": "Diagnosing Slow Operations",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A production endpoint that was previously fast now takes several seconds, but the application CPU is normal. How would you determine whether the database is responsible?",
+    "sample_answer": "Compare endpoint latency with database query timings, connection-acquisition delays, query plans, lock waits, and database resource metrics. Correlate slow requests with query logs or tracing, identify the expensive operation, and test a targeted fix under representative load.",
+    "key_concepts": [
+      "query latency",
+      "connection waits",
+      "lock contention",
+      "query plans",
+      "observability"
+    ],
+    "follow_up_questions": [
+      "How would you distinguish time spent waiting for a connection from time spent executing a query?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_024",
+    "topic": "Database Design",
+    "subtopic": "Denormalization at Scale",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A reporting endpoint repeatedly joins several large tables and is too slow. When might denormalization help, and what risks should you consider?",
+    "sample_answer": "A summary table, materialized view, or selectively duplicated fields can reduce repeated expensive joins for read-heavy workloads. Consider refresh strategy, stale data, update consistency, storage, and operational complexity. Measure the original bottleneck before choosing denormalization.",
+    "key_concepts": [
+      "denormalization",
+      "materialized views",
+      "read-heavy workloads",
+      "data freshness",
+      "consistency"
+    ],
+    "follow_up_questions": [
+      "When would a materialized view be preferable to maintaining duplicated fields directly in application writes?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_025",
+    "topic": "Transactions",
+    "subtopic": "Concurrent Updates",
+    "difficulty": "hard",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "Two users attempt to reserve the last available item at almost the same time. How would you prevent both requests from succeeding?",
+    "sample_answer": "Enforce the availability rule atomically in the database, using a suitable transaction, conditional update, locking strategy, or constraint. Handle conflicts explicitly and return a clear response to the losing request. A separate application-level read followed by an unconditional write is not sufficient.",
+    "key_concepts": [
+      "race conditions",
+      "atomic updates",
+      "transactions",
+      "locking",
+      "constraints"
+    ],
+    "follow_up_questions": [
+      "Why can checking availability before starting the transaction still lead to overbooking?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_026",
+    "topic": "Database Performance",
+    "subtopic": "N+1 Query Problem",
+    "difficulty": "medium",
+    "priority": "P1",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "An API returns 100 orders and issues one additional database query for each order's customer. What is the problem, and how would you improve it?",
+    "sample_answer": "This is an N+1 query pattern: one query retrieves the orders, followed by many queries for related data. Use an appropriate join, batch query, eager-loading strategy, or grouped lookup to fetch related records efficiently while avoiding unnecessarily large result sets.",
+    "key_concepts": [
+      "N+1 queries",
+      "joins",
+      "batch loading",
+      "eager loading",
+      "query count"
+    ],
+    "follow_up_questions": [
+      "Why might one very large join still perform poorly compared with a carefully designed batch query?"
+    ],
+    "estimated_time_minutes": 3
+  },
+  {
+    "id": "databases_027",
+    "topic": "Database Reliability",
+    "subtopic": "Deadlocks",
+    "difficulty": "hard",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "What is a database deadlock, and how should an application handle one?",
+    "sample_answer": "A deadlock occurs when transactions wait on resources held by one another in a cycle. Databases can detect and abort a transaction to break the cycle. Applications should handle the resulting error, retry the complete transaction when safe with bounded backoff, and reduce deadlocks through consistent lock ordering and shorter transactions.",
+    "key_concepts": [
+      "deadlock",
+      "lock contention",
+      "transaction retry",
+      "lock ordering",
+      "bounded backoff"
+    ],
+    "follow_up_questions": [
+      "Why should a retry restart the entire transaction rather than continue from an arbitrary statement?"
+    ],
+    "estimated_time_minutes": 4
+  },
+  {
+    "id": "databases_028",
+    "topic": "Database Selection",
+    "subtopic": "Consistency and Data Modeling",
+    "difficulty": "medium",
+    "priority": "P2",
+    "experience_category": "experienced",
+    "role_tags": [
+      "Full Stack Developer",
+      "Backend Developer",
+      "SDE"
+    ],
+    "question": "A team proposes switching from PostgreSQL to MongoDB because the product requirements change frequently. What would you evaluate before deciding?",
+    "sample_answer": "Evaluate actual schema variability, relationships, query patterns, transaction requirements, consistency guarantees, operational expertise, migration cost, and expected scaling needs. PostgreSQL also supports semi-structured JSON data, so changing databases is not automatically necessary when requirements evolve.",
+    "key_concepts": [
+      "database selection",
+      "schema flexibility",
+      "JSON support",
+      "transactions",
+      "migration cost",
+      "access patterns"
+    ],
+    "follow_up_questions": [
+      "What evidence would justify the migration rather than improving the existing schema?"
+    ],
+    "estimated_time_minutes": 4
+  }
+]
