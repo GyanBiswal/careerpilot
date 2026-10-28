@@ -7,6 +7,7 @@ from sqlalchemy.orm import Session
 
 from app.core.security import decode_access_token
 from app.db.session import get_db
+from app.models.interview import InterviewSession
 from app.models.job_application import JobApplication
 from app.models.user import User
 
@@ -53,7 +54,6 @@ def get_owned_application(
 
     Filtering by BOTH id and user_id means another user's application looks
     exactly like one that doesn't exist (404), so existence is never leaked.
-    Later phases (resumes, interviews) will depend on this too.
     """
     application = db.scalar(
         select(JobApplication).where(
@@ -64,3 +64,20 @@ def get_owned_application(
     if application is None:
         raise HTTPException(status_code=404, detail="Application not found")
     return application
+
+
+def get_owned_interview(
+    interview_id: uuid.UUID,
+    application: JobApplication = Depends(get_owned_application),
+    db: Session = Depends(get_db),
+) -> InterviewSession:
+    """Load an interview only if it belongs to this (already ownership-checked) application."""
+    interview = db.scalar(
+        select(InterviewSession).where(
+            InterviewSession.id == interview_id,
+            InterviewSession.application_id == application.id,
+        )
+    )
+    if interview is None:
+        raise HTTPException(status_code=404, detail="Interview not found")
+    return interview

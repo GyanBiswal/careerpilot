@@ -11,6 +11,7 @@ from app.api.routes import (
     applications,
     auth,
     checklist,
+    interviews,
     job_descriptions,
     question_banks,
     resumes,
@@ -51,6 +52,7 @@ app.include_router(job_descriptions.router)
 app.include_router(analysis.router)
 app.include_router(question_banks.router)
 app.include_router(checklist.router)
+app.include_router(interviews.router)
 
 
 @app.get("/health", tags=["Health"])
